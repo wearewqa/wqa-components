@@ -1,0 +1,56 @@
+body {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+
+  @include bp(sm) {
+    line-height: $line-height-lg;
+    font-size: $font-size-lg;
+  }
+}
+
+a {
+  color: $color-link-default;
+  text-decoration: underline;
+  transition: color 0.1s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-link-hover;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+// Quote
+blockquote {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-style: normal;
+
+  p {
+    quotes: "“" "“";
+
+    &:first-of-type {
+      &::before {
+        content: open-quote;
+      }
+    }
+    &:last-of-type {
+      &::after {
+        content: close-quote;
+      }
+    }
+  }
+}

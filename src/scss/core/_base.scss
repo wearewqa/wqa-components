@@ -1,0 +1,80 @@
+// resets and extends element selectors. This should contain element selectors only
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  color: $color-text;
+  background-color: $color-white;
+}
+
+dl,
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $color-black;
+  transition: color 0.1s;
+
+  //   &:hover,
+  //   &:focus,
+  //   &:active {
+  //     color: $color-black;
+  //   }
+}
+
+p {
+  margin: 0 0 1em;
+
+  &:last-child {
+    // margin-bottom: 0;
+  }
+}
+
+button {
+  background: none;
+  border: 0;
+  appearance: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+mark {
+  padding: 0 0.1em;
+  margin: 0 -0.1em;
+  background: $color-black;
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+figure {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+::selection {
+  background: $color-selection;
+  color: $color-text;
+}
+
+[x-cloak],
+[hidden] {
+  display: none !important;
+}

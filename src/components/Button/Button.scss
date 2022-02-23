@@ -1,3 +1,236 @@
-button {
-  font-size: 200px;
+@import "../../scss/core/global";
+
+.button {
+  $self: &;
+
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  border-radius: 8px;
+  font-weight: $font-weight-medium;
+  font-size: rem(14px);
+  line-height: rem(20px);
+  padding: 5px 14px;
+  min-height: 36px;
+
+  &:disabled,
+  &.is-disabled {
+    cursor: not-allowed;
+    @include opacity(0.3);
+  }
+
+  // Button colors:
+  &--primary {
+    background-color: $color-primary-600;
+    color: $color-white;
+    @include shadow(xsmall);
+
+    &:disabled,
+    &.is-disabled {
+      color: $color-white;
+    }
+
+    &:not(:disabled):not(.is-disabled) {
+      &:focus {
+        background-color: $color-primary-600;
+        color: $color-white;
+        outline: 4px solid $color-primary-100;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-primary-700;
+        color: $color-white;
+      }
+    }
+
+    #{$self}__icon {
+      stroke: $color-white;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-primary-50;
+    color: $color-primary-700;
+    @include shadow(xsmall);
+
+    &:disabled,
+    &.is-disabled {
+      background-color: $color-primary-25;
+      color: $color-primary-300;
+    }
+
+    &:not(:disabled):not(.is-disabled) {
+      &:focus {
+        background-color: $color-primary-50;
+        color: $color-primary-700;
+        outline: 4px solid $color-primary-100;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-primary-100;
+        color: $color-primary-700;
+      }
+    }
+
+    #{$self}__icon {
+      stroke: $color-primary-700;
+    }
+  }
+
+  &--secondary-gray {
+    background-color: $color-white;
+    color: $color-gray-700;
+    border: 1px solid $color-gray-300;
+    @include shadow(xsmall);
+
+    &:disabled,
+    &.is-disabled {
+      color: $color-gray-700;
+    }
+
+    &:not(:disabled):not(.is-disabled) {
+      &:focus {
+        background-color: $color-white;
+        color: $color-gray-700;
+        outline: 4px solid $color-gray-100;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-gray-50;
+        color: $color-gray-700;
+      }
+    }
+
+    #{$self}__icon {
+      stroke: $color-gray-700;
+    }
+  }
+
+  &--tertiary {
+    background-color: $color-white;
+    color: $color-primary-700;
+
+    &:disabled,
+    &.is-disabled {
+      color: $color-gray-300;
+    }
+
+    &:not(:disabled):not(.is-disabled) {
+      &:focus {
+        background-color: $color-white;
+        color: $color-primary-700;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-primary-50;
+        color: $color-primary-700;
+      }
+    }
+
+    #{$self}__icon {
+      stroke: $color-primary-700;
+    }
+  }
+
+  &--tertiary-gray {
+    background-color: transparent;
+    color: $color-gray-500;
+
+    &:disabled,
+    &.is-disabled {
+      color: $color-gray-300;
+    }
+
+    &:not(:disabled):not(.is-disabled) {
+      &:focus {
+        background-color: transparent;
+        color: $color-gray-500;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-gray-50;
+        color: $color-gray-600;
+      }
+    }
+
+    #{$self}__icon {
+      stroke: $color-primary-500;
+    }
+  }
+
+  // Button types
+  &--icon {
+    flex-direction: row-reverse;
+
+    #{$self}__icon {
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+  }
+
+  &--rev {
+    flex-direction: row;
+
+    #{$self}__icon {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+  }
+
+  // Button widths
+  &--full {
+    width: 100%;
+  }
+
+  &--full-xs {
+    @include bp(xs) {
+      width: 100%;
+    }
+  }
+
+  // Button sizes:
+  //   &--small { // same as the default .button styles, so commented out for now
+  //     font-size: rem(14px);
+  //     line-height: rem(20px);
+  //   }
+
+  &--medium {
+    font-size: rem(14px);
+    line-height: rem(20px);
+    padding: 5px 16px;
+    min-height: 40px;
+  }
+
+  &--large {
+    font-size: rem(16px);
+    line-height: rem(24px);
+    padding: 5px 18px;
+    min-height: 44px;
+  }
+
+  &--xlarge {
+    font-size: rem(16px);
+    line-height: rem(24px);
+    padding: 5px 20px;
+    min-height: 48px;
+  }
+
+  &--xxlarge {
+    font-size: rem(18px);
+    line-height: rem(28px);
+    padding: 5px 28px;
+    min-height: 48px;
+
+    @include bp(md) {
+      min-height: 60px;
+    }
+  }
 }

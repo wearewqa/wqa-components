@@ -1,0 +1,182 @@
+/* stylelint-disable */
+
+// Breakpoints
+@mixin bp($class) {
+  @if $class == xs {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media screen and (min-width: map-get($breakpoints, sm)) {
+      @content;
+    }
+  } @else if $class == sm-max {
+    @media screen and (max-width: map-get($breakpoints, md) - 1) {
+      @content;
+    }
+  } @else if $class == md {
+    @media screen and (min-width: map-get($breakpoints, md)) {
+      @content;
+    }
+  } @else if $class == md-max {
+    @media screen and (max-width: map-get($breakpoints, lg) - 1) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media screen and (min-width: map-get($breakpoints, lg)) {
+      @content;
+    }
+  } @else if $class == lg-min {
+    @media screen and (min-width: map-get($breakpoints, lg) + 1) {
+      @content;
+    }
+  } @else if $class == xl {
+    @media screen and (min-width: map-get($breakpoints, xl)) {
+      @content;
+    }
+  } @else if $class == landscape {
+    @media only screen and (max-width: 736px) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $class == ie-only {
+    @media screen and (-ms-high-contrast: active),
+      screen and (-ms-high-contrast: none) {
+      @content;
+    }
+  } @else {
+    @warn 'Breakpoint mixin supports: xxs, xs, sm, md, lg, xl, ie-only, landscape';
+  }
+}
+
+// Vendor
+// Adds vendor prefixes (eg. '-moz-', -webkit-') to CSS properties
+@mixin vendor($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+// Pseudo
+// When using ::before and ::after you'll always need these three, so we're saving two lines of code every time you use this.
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// Placeholder
+// For styling form field placeholder text
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+@mixin placeholder {
+  @include optional-at-root("::-webkit-input-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root("::-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-ms-input-placeholder") {
+    @content;
+  }
+}
+
+// Plain list
+// For use you're using a list element (ul, ol) but you don't want the default bullet/number and padding/margin that comes along with it
+@mixin plain-list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+// Opacity
+// Cross-browser (including IE8) opacity
+@mixin opacity($opacity) {
+  $opacity-ie: $opacity * 100;
+  opacity: $opacity;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Force word wrap
+// Forces long words to wrap onto the next line(s). Helpful for use on a site with multiple languages.
+@mixin force-word-wrap {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  hyphens: auto;
+  hyphens: auto;
+  hyphens: auto;
+}
+
+// Truncate text
+// Adds an ellipsis to the end of a line of text
+@mixin truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@function rem($size) {
+  $rem-size: calc($size / 16px);
+  @return #{$rem-size}rem;
+}
+
+@mixin font-primary($utility: "") {
+  @if $utility == true {
+    font-family: $font-family-primary !important;
+  } @else {
+    font-family: $font-family-primary;
+  }
+}
+
+@mixin code-styles {
+  background-color: #efefef;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: rem(14px);
+  font-weight: $font-weight-regular;
+}
+
+@mixin shadow($size) {
+  @if $size == xsmall {
+    box-shadow: 0px 1px 2px rgba($color-gray-900, 0.05);
+  }
+  @if $size == small {
+    box-shadow: 0px 1px 3px rgba($color-gray-900, 0.1),
+      0px 1px 2px rgba($color-gray-900, 0.06);
+  }
+  @if $size == medium {
+    box-shadow: 0px 4px 8px -2px rgba($color-gray-900, 0.1),
+      0px 2px 4px -2px rgba($color-gray-900, 0.06);
+  }
+  @if $size == large {
+    box-shadow: 0px 12px 16px -4px rgba($color-gray-900, 0.1),
+      0px 4px 6px -2px rgba($color-gray-900, 0.05);
+  }
+  @if $size == xlarge {
+    box-shadow: 0px 20px 24px -4px rgba($color-gray-900, 0.1),
+      0px 8px 8px -4px rgba($color-gray-900, 0.04);
+  }
+  @if $size == xxlarge {
+    box-shadow: 0px 24px 48px -12px rgba($color-gray-900, 0.25);
+  }
+  @if $size == xxxlarge {
+    box-shadow: 0px 32px 64px -12px rgba($color-gray-900, 0.2);
+  }
+}
+/* stylelint-enable */

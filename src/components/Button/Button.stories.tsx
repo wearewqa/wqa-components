@@ -1,23 +1,24 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "./Button";
+// YourComponent.stories.ts | YourComponent.stories.tsx
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+import React, { ComponentProps } from "react";
+
+import { Story, Meta } from "@storybook/react";
+
+import Button from "./index";
+
+//👇 This default export determines where your story goes in the story list
 export default {
-  title: "ReactComponentLibrary/Button",
+  title: "Components/Button",
   component: Button,
-} as ComponentMeta<typeof Button>;
+} as Meta;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+//👇 We create a “template” of how args map to rendering
+const Template: Story<ComponentProps<typeof Button>> = (args) => (
+  <Button {...args} />
+);
 
-export const HelloWorld = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-HelloWorld.args = {
-  label: "Hello world!",
-};
-
-export const ClickMe = Template.bind({});
-ClickMe.args = {
-  label: "Click me!",
+export const Default = Template.bind({});
+Default.args = {
+  color: "primary",
+  children: "Button",
 };
