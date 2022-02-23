@@ -1,0 +1,76 @@
+@import "../../scss/core/abstracts/mixins";
+@import "../../scss/core/abstracts/variables";
+
+.annotation {
+  $self: &;
+
+  display: flex;
+  color: $color-primary-700;
+  font-weight: $font-weight-medium;
+
+  &__text {
+    font-size: rem(14px);
+    line-height: rem(20px);
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+  }
+
+  // arrow direction modifiers
+  &--bottom-left {
+    align-items: flex-start;
+
+    #{$self}__arrow {
+      order: 1;
+    }
+
+    #{$self}__text {
+      order: 2;
+      margin-top: -5px;
+    }
+  }
+
+  &--bottom-right {
+    align-items: flex-start;
+
+    #{$self}__arrow {
+      order: 2;
+      transform: scaleX(-1);
+    }
+
+    #{$self}__text {
+      order: 1;
+      margin-top: -5px;
+    }
+  }
+
+  &--top-left {
+    align-items: flex-end;
+
+    #{$self}__arrow {
+      order: 1;
+      transform: scaleX(-1);
+      transform: scaleY(-1);
+    }
+
+    #{$self}__text {
+      order: 2;
+      margin-bottom: -5px;
+    }
+  }
+
+  &--top-right {
+    align-items: flex-end;
+
+    #{$self}__arrow {
+      order: 2;
+      transform: rotate(180deg);
+    }
+
+    #{$self}__text {
+      order: 1;
+      margin-bottom: -5px;
+    }
+  }
+}
