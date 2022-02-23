@@ -1,0 +1,130 @@
+@import "../../scss/core/global";
+
+.badge {
+  $self: &;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 2px 10px;
+  margin: 0;
+  font-weight: $font-weight-medium;
+  font-size: rem(14px);
+  line-height: rem(20px);
+
+  &__icon {
+    margin-left: 4px;
+    margin-right: -2px;
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+  }
+
+  // Sizes
+  &--small {
+    font-size: rem(12px);
+    line-height: rem(18px);
+  }
+
+  //   &--medium { // same as the default component, so commented out for now
+  //     font-size: rem(14px);
+  //     line-height: rem(20px);
+  //   }
+
+  &--large {
+    padding: 4px 12px;
+    font-size: rem(14px);
+    line-height: rem(20px);
+  }
+
+  // Reverse (swap icon and text)
+  &--rev {
+    flex-direction: row-reverse;
+
+    #{$self}__icon {
+      margin-right: 4px;
+      margin-left: -2px;
+    }
+  }
+
+  // Colors
+  // "gray" | "primary" | "error" | "warning" | "success" | "blue-gray" | "blue-light" | "blue" | "indigo" | "purple" | "pink" | "rose" | "orange"
+  &--gray {
+    background-color: $color-gray-100;
+    color: $color-gray-700;
+  }
+
+  &--primary {
+    background-color: $color-primary-50;
+    color: $color-primary-700;
+
+    #{$self}__icon {
+      stroke: $color-primary-500;
+    }
+  }
+
+  &--error {
+    background-color: $color-error-50;
+    color: $color-error-700;
+  }
+
+  &--warning {
+    background-color: $color-warning-50;
+    color: $color-warning-700;
+  }
+
+  &--success {
+    background-color: $color-success-50;
+    color: $color-success-700;
+
+    #{$self}__icon {
+      stroke: $color-success-500;
+    }
+  }
+
+  &--blue-gray {
+    background-color: $color-blue-gray-50;
+    color: $color-blue-gray-700;
+  }
+
+  &--blue-light {
+    background-color: $color-blue-light-50;
+    color: $color-blue-light-700;
+  }
+
+  &--blue {
+    background-color: $color-blue-50;
+    color: $color-blue-700;
+  }
+
+  &--indigo {
+    background-color: $color-indigo-50;
+    color: $color-indigo-700;
+  }
+
+  &--purple {
+    background-color: $color-purple-50;
+    color: $color-purple-700;
+  }
+
+  &--pink {
+    background-color: $color-pink-50;
+    color: $color-pink-700;
+  }
+
+  &--rose {
+    background-color: $color-rose-50;
+    color: $color-rose-700;
+  }
+
+  &--orange {
+    background-color: $color-orange-50;
+    color: $color-orange-700;
+  }
+
+  &--base {
+    background-color: $color-white;
+    color: $color-gray-700;
+  }
+}
