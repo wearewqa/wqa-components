@@ -1,0 +1,36 @@
+@import "../../scss/core/abstracts/mixins";
+@import "../../scss/core/abstracts/variables";
+
+.progress-link {
+  $self: &;
+
+  display: inline-flex;
+  background-color: transparent;
+  color: $color-primary-700;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  border-radius: 8px;
+  font-weight: $font-weight-medium;
+  font-size: rem(16px);
+  line-height: rem(24px);
+
+  &__icon {
+    stroke: $color-primary-700;
+    transition: transform 50ms;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-primary-700;
+
+    #{$self}__icon {
+      transform: translateX(5px);
+    }
+  }
+}
