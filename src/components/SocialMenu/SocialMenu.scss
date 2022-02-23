@@ -1,0 +1,26 @@
+@import "../../scss/core/global";
+
+.social-menu {
+  $self: &;
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  &__item {
+    list-style: none;
+    margin-right: 24px;
+    margin-left: 0;
+
+    @include bp(md) {
+      margin-left: 24px;
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
