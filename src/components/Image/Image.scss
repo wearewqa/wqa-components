@@ -1,0 +1,22 @@
+@import "../../scss/core/abstracts/mixins";
+@import "../../scss/core/abstracts/variables";
+
+.image {
+  $self: &;
+
+  display: block;
+
+  // alignment
+  &--center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &--left {
+    margin-right: auto;
+  }
+
+  &--right {
+    margin-left: auto;
+  }
+}
