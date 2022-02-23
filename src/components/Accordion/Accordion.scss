@@ -1,0 +1,68 @@
+@import "../../scss/core/global";
+
+.accordion {
+  $self: &;
+
+  &__title {
+    display: flex;
+
+    &:not(:first-of-type) {
+      #{$self}__button {
+        border-top: 1px solid $color-gray-200;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 12px 0;
+    text-align: left;
+    background-color: transparent;
+    font-size: rem(18px);
+    line-height: rem(28px);
+
+    @include bp(md) {
+      align-items: center;
+      padding: 24px 0;
+    }
+
+    &[aria-expanded="true"]:before {
+      // content: url("../images/down-arrow-brown.png");
+      padding-right: 0.35em;
+    }
+    &[aria-expanded="false"]:before {
+      // content: url("../images/right-arrow-brown.png");
+      padding-right: 0.35em;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    &:focus {
+      border-style: dashed;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0 0 24px;
+    display: none;
+    color: $color-gray-500;
+    font-size: rem(16px);
+    line-height: rem(24px);
+
+    @include bp(md) {
+      margin: -12px 0 0;
+    }
+  }
+
+  &__content {
+    &--active {
+      #{$self}__text {
+        display: block !important;
+      }
+    }
+  }
+}
