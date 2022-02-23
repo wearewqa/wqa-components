@@ -1,0 +1,6 @@
+/src/**/*.tsx
+/src/**/*.ts
+/*.js
+/dist
+webpack.config.*.js
+/node_modules

@@ -1,5 +1,3 @@
-// YourComponent.stories.ts | YourComponent.stories.tsx
-
 import React, { ComponentProps } from "react";
 
 import { Story, Meta } from "@storybook/react";
