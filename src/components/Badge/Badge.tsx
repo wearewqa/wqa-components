@@ -4,22 +4,8 @@ import classnames from "classnames";
 import "./Badge.scss";
 
 type BadgeProps = {
-  color?:
-    | "gray"
-    | "primary"
-    | "error"
-    | "warning"
-    | "gray"
-    | "success"
-    | "blue-gray"
-    | "blue-light"
-    | "blue"
-    | "indigo"
-    | "purple"
-    | "pink"
-    | "rose"
-    | "orange";
-  size?: "small" | "medium" | "large" | "xlarge" | "xxlarge";
+  color?: "gray" | "primary" | "error" | "warning" | "gray" | "success" | "blue-gray" | "blue-light" | "blue" | "indigo" | "purple" | "pink" | "rose" | "orange";
+  size?: "small" | "medium" | "large"; // | "xlarge" | "xxlarge";
   iconReverse?: boolean;
   groupItem?: boolean;
   highlighted?: boolean;
@@ -27,31 +13,14 @@ type BadgeProps = {
   children: React.ReactNode;
 };
 
-function Badge({
-  color,
-  size,
-  iconReverse,
-  groupItem,
-  highlighted,
-  code,
-  children,
-}: BadgeProps): JSX.Element {
+function Badge({ color, size, iconReverse, groupItem, highlighted, code, children }: BadgeProps): JSX.Element {
   const baseClassName = "badge";
   const colorClassName = color ? `${baseClassName}--${color}` : "";
   const sizeClassName = size ? `${baseClassName}--${size}` : "";
   const groupItemClassName = groupItem ? "badge-group__item" : "";
   const iconReverseClassName = iconReverse ? `${baseClassName}--rev` : "";
-  const highlightedClassName = highlighted
-    ? "badge-group__item--highlighted"
-    : "";
-  const classNames = classnames(
-    groupItemClassName,
-    highlightedClassName,
-    baseClassName,
-    colorClassName,
-    sizeClassName,
-    iconReverseClassName
-  );
+  const highlightedClassName = highlighted ? "badge-group__item--highlighted" : "";
+  const classNames = classnames(groupItemClassName, highlightedClassName, baseClassName, colorClassName, sizeClassName, iconReverseClassName);
   const html = (
     <>
       <span className={`${classNames}`}>{children}</span>
