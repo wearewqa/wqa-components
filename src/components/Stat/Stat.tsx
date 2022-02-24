@@ -13,8 +13,8 @@ type StatProps = {
 
 function Stat({ color, value, title, text, code }: StatProps): JSX.Element {
   const baseClassName = "stat";
-  const typeClassName = color ? `${baseClassName}--${color}` : "";
-  const classNames = classnames(baseClassName, typeClassName);
+  const colorClassName = color ? `${baseClassName}--${color}` : "";
+  const classNames = classnames(baseClassName, colorClassName);
   const html = (
     <>
       <div className={`${classNames}`}>

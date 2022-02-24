@@ -4,15 +4,15 @@ import classnames from "classnames";
 import "./SocialMenu.scss";
 
 type SocialMenuProps = {
-  type?: "primary" | "secondary" | "tertiary";
+  color?: "primary" | "secondary" | "tertiary";
   code?: boolean;
   children: React.ReactNode;
 };
 
-function SocialMenu({ type, code, children }: SocialMenuProps): JSX.Element {
+function SocialMenu({ color, code, children }: SocialMenuProps): JSX.Element {
   const baseClassName = "social-menu";
-  const typeClassName = type ? `${baseClassName}--${type}` : "";
-  const classNames = classnames(baseClassName, typeClassName);
+  const colorClassName = color ? `${baseClassName}--${color}` : "";
+  const classNames = classnames(baseClassName, colorClassName);
   const html = (
     <>
       <ul className={`${classNames}`}>{children}</ul>

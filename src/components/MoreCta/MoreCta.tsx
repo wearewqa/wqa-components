@@ -4,7 +4,7 @@ import classnames from "classnames";
 import "./MoreCta.scss";
 
 type MoreCtaProps = {
-  type?: "primary" | "secondary" | "tertiary";
+  color?: "primary" | "secondary" | "tertiary";
   heading: string;
   avatarSrc: string;
   text: string;
@@ -12,10 +12,10 @@ type MoreCtaProps = {
   children: React.ReactNode;
 };
 
-function MoreCta({ type, heading, avatarSrc, text, code, children }: MoreCtaProps): JSX.Element {
+function MoreCta({ color, heading, avatarSrc, text, code, children }: MoreCtaProps): JSX.Element {
   const baseClassName = "more-cta";
-  const typeClassName = type ? `${baseClassName}--${type}` : "";
-  const classNames = classnames(baseClassName, typeClassName);
+  const colorClassName = color ? `${baseClassName}--${color}` : "";
+  const classNames = classnames(baseClassName, colorClassName);
   const html = (
     <>
       <div className={`${classNames}`}>
