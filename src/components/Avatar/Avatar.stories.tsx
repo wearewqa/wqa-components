@@ -8,7 +8,7 @@ import Avatar from "./Avatar";
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: "Components/Avatar",
+  title: "Components/Images/Avatar",
   component: Avatar,
 } as Meta;
 
