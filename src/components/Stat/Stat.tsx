@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOMServer from "react-dom/server";
+// import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import "./Stat.scss";
 
@@ -24,10 +24,10 @@ function Stat({ color, value, title, text, code }: StatProps): JSX.Element {
       </div>
     </>
   );
-  const htmlString = ReactDOMServer.renderToStaticMarkup(html);
-  if (code) {
-    return <code>{`${htmlString}`}</code>;
-  }
+  // const htmlString = ReactDOMServer.renderToStaticMarkup(html);
+  // if (code) {
+  //   return <code>{`${htmlString}`}</code>;
+  // }
   return html;
 }
 

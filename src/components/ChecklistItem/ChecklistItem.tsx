@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOMServer from "react-dom/server";
+// import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import Icon from "../Icon/Icon";
 
@@ -21,10 +21,10 @@ function ChecklistItem({ color, code, children }: ChecklistItemProps): JSX.Eleme
       </li>
     </>
   );
-  const htmlString = ReactDOMServer.renderToStaticMarkup(html);
-  if (code) {
-    return <code>{`${htmlString}`}</code>;
-  }
+  // const htmlString = ReactDOMServer.renderToStaticMarkup(html);
+  // if (code) {
+  //   return <code>{`${htmlString}`}</code>;
+  // }
   return html;
 }
 

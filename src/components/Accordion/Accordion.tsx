@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOMServer from "react-dom/server";
+//import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import "./Accordion.scss";
 
@@ -20,10 +20,10 @@ const Accordion: React.FC<Props> = ({ color, size, code, children }) => {
       <dl className={`${classNames}`}>{children}</dl>
     </>
   );
-  const htmlString = ReactDOMServer.renderToStaticMarkup(html);
-  if (code) {
-    return <code>{`${htmlString}`}</code>;
-  }
+  // const htmlString = ReactDOMServer.renderToStaticMarkup(html);
+  // if (code) {
+  //   return <code>{`${htmlString}`}</code>;
+  // }
   return html;
 };
 

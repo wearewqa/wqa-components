@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOMServer from "react-dom/server";
+//import ReactDOMServer from "react-dom/server";
 import Icon from "../Icon/Icon";
 
 type AccordionItemProps = {
@@ -27,10 +27,10 @@ function AccordionItem({ id, active, title, content, code }: AccordionItemProps)
       </dd>
     </>
   );
-  const htmlString = ReactDOMServer.renderToStaticMarkup(html);
-  if (code) {
-    return <code>{`${htmlString}`}</code>;
-  }
+  // const htmlString = ReactDOMServer.renderToStaticMarkup(html);
+  // if (code) {
+  //   return <code>{`${htmlString}`}</code>;
+  // }
   return html;
 }
 

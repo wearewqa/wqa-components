@@ -1,5 +1,5 @@
 import React, { Children } from "react";
-import ReactDOMServer from "react-dom/server";
+// import ReactDOMServer from "react-dom/server";
 import Avatar from "../Avatar";
 import classnames from "classnames";
 import { TextAlign } from "../../enums/TextAlign";
@@ -38,10 +38,10 @@ function Quote({ align, text, authorName, authorPosition, authorAvatar, code }: 
       </figure>
     </>
   );
-  const htmlString = ReactDOMServer.renderToStaticMarkup(html);
-  if (code) {
-    return <code>{`${htmlString}`}</code>;
-  }
+  // const htmlString = ReactDOMServer.renderToStaticMarkup(html);
+  // if (code) {
+  //   return <code>{`${htmlString}`}</code>;
+  // }
   return html;
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOMServer from "react-dom/server";
+//import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import "./BadgeGroup.scss";
 
@@ -22,10 +22,10 @@ function BadgeGroup({ color, shade, size, code, children }: BadgeGroupProps): JS
       <div className={`${classNames}`}>{children}</div>
     </>
   );
-  const htmlString = ReactDOMServer.renderToStaticMarkup(html);
-  if (code) {
-    return <code>{`${htmlString}`}</code>;
-  }
+  // const htmlString = ReactDOMServer.renderToStaticMarkup(html);
+  // if (code) {
+  //   return <code>{`${htmlString}`}</code>;
+  // }
   return html;
 }
 

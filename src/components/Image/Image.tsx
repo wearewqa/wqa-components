@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOMServer from "react-dom/server";
+// import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import { ShadowSize } from "../../enums/ShadowSize";
 import "./Image.scss";
@@ -24,10 +24,10 @@ const Image = ({ src, alt, align, shadow, className, code }: ImageProps) => {
       <img src={src} alt={alt} className={`${classNames}`} />
     </>
   );
-  const htmlString = ReactDOMServer.renderToStaticMarkup(html);
-  if (code) {
-    return <code>{`${htmlString}`}</code>;
-  }
+  // const htmlString = ReactDOMServer.renderToStaticMarkup(html);
+  // if (code) {
+  //   return <code>{`${htmlString}`}</code>;
+  // }
   return html;
 };
 

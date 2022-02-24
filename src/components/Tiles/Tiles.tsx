@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOMServer from "react-dom/server";
+// import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import Image from "../Image/Image";
 import { ShadowSize } from "../../enums/ShadowSize";
@@ -55,10 +55,10 @@ function Tiles({ reverse, flush, image, mobileImage, mobileImageFlush, imageAlt,
       </section>
     </>
   );
-  const htmlString = ReactDOMServer.renderToStaticMarkup(html);
-  if (code) {
-    return <code>{`${htmlString}`}</code>;
-  }
+  // const htmlString = ReactDOMServer.renderToStaticMarkup(html);
+  // if (code) {
+  //   return <code>{`${htmlString}`}</code>;
+  // }
   return html;
 }
 
