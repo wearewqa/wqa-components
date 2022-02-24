@@ -1,9 +1,10 @@
 {
   "name": "@wearewqa/wqa-components",
-  "version": "1.0.3",
+  "version": "1.0.11",
   "description": "",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/wearewqa"
+    "registry": "https://www.npmjs.com/wearewqa",
+    "access": "public"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
