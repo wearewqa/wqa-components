@@ -20,14 +20,9 @@ const Template: Story<ComponentProps<typeof Feature>> = (args) => <Feature {...a
 export const Default = Template.bind({});
 Default.args = {
   layout: "row",
-  children: (
-    <>
-      <Icon name="mail-outline" size={IconSize.large} className="feature__mast" />
-      {/* <Heading className="feature__title" level={HeadingLevel.h3} size={FontSize.headingSmall} weight={FontWeight.semiBold}>
-        Share team inboxes
-      </Heading> */}
-      <h3 className="feature__title">Share team inboxes</h3>
-      <p className="feature__text">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.</p>
-    </>
-  ),
+  iconName: "mail-outline",
+  title: "Feature title",
+  text: "Feature text",
+  linkText: "Learn more",
+  linkHref: "/",
 };
