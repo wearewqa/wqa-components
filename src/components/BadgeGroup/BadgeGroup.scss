@@ -1,0 +1,67 @@
+@import "../../scss/core/abstracts/mixins";
+@import "../../scss/core/abstracts/variables";
+
+.badge-group {
+  $self: &;
+
+  display: inline-flex;
+  align-items: center;
+  border-radius: 16px;
+  margin: 0;
+  font-weight: $font-weight-medium;
+  padding: 4px;
+  min-height: 32px;
+
+  &__item {
+    font-size: rem(12px);
+    line-height: rem(22px);
+    padding: 0 8px;
+
+    @include bp(md) {
+      font-size: rem(14px);
+      line-height: rem(24px);
+    }
+
+    &--highlighted {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+
+  // Sizes
+  &--small {
+    // named 'medium' in the designs but since there are no other sizes calling it 'small' makes more sense
+    min-height: 30px;
+
+    #{$self}__item {
+      font-size: rem(12px);
+      line-height: rem(22px);
+    }
+  }
+
+  // Colors
+  &--primary {
+    background-color: $color-primary-50;
+    color: $color-primary-700;
+
+    #{$self}__item--highlighted {
+      background-color: $color-white;
+    }
+
+    // Shades
+    &#{$self}--mid {
+      background-color: $color-primary-100;
+
+      #{$self}__item--highlighted {
+        background-color: $color-primary-50;
+      }
+    }
+    &#{$self}--dark {
+      #{$self}__item--highlighted {
+        background-color: $color-primary-600;
+        color: $color-white;
+      }
+    }
+  }
+}

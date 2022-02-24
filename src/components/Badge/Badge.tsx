@@ -5,7 +5,7 @@ import "./Badge.scss";
 
 type BadgeProps = {
   color?: "gray" | "primary" | "error" | "warning" | "gray" | "success" | "blue-gray" | "blue-light" | "blue" | "indigo" | "purple" | "pink" | "rose" | "orange";
-  size?: "small" | "medium" | "large" | "xlarge" | "xxlarge";
+  size?: "small" | "medium" | "large"; // | "xlarge" | "xxlarge";
   iconReverse?: boolean;
   groupItem?: boolean;
   highlighted?: boolean;

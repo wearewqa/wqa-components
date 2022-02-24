@@ -1,0 +1,126 @@
+@import "../../scss/core/global";
+
+.quote {
+  $self: &;
+
+  color: $color-gray-900;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    font-style: normal;
+    font-weight: $font-weight-medium;
+    font-size: rem(30px);
+    line-height: rem(38px);
+
+    @include bp(md) {
+      font-size: rem(48px);
+      line-height: rem(60px);
+    }
+
+    > * {
+      quotes: none;
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__position {
+    color: $color-gray-500;
+  }
+
+  &__avatar {
+    order: -1;
+    margin: 0 auto 16px;
+  }
+
+  // Types
+  //   &--simple-centered {
+  //     padding: 64px 0;
+  //     text-align: center;
+
+  //     @include bp(md) {
+  //       padding: 96px 0;
+  //     }
+
+  //     #{$self}__text {
+  //       margin-bottom: 32px;
+  //     }
+
+  //     #{$self}__author {
+  //       font-weight: $font-weight-medium;
+  //     }
+
+  //     #{$self}__position {
+  //       font-weight: $font-weight-regular;
+  //       font-size: rem(16px);
+  //       line-height: rem(24px);
+
+  //       @include bp(md) {
+  //         font-size: rem(18px);
+  //         line-height: rem(28px);
+  //       }
+  //     }
+
+  //     #{$self}__avatar {
+  //       margin: 0 auto 16px;
+  //       order: -1;
+  //     }
+  //   }
+
+  //   &--simple-centered-2 {
+  //     #{$self}__logos {
+  //       order: 1;
+  //       margin-bottom: 32px;
+  //     }
+
+  //     #{$self}__text {
+  //       order: 2;
+  //       font-size: rem(30px);
+  //       line-height: rem(38px);
+
+  //       @include bp(md) {
+  //         font-size: rem(48px);
+  //         line-height: rem(60px);
+  //       }
+  //     }
+
+  //     #{$self}__author {
+  //       order: 3;
+  //     }
+  //   }
+
+  //   &--simple-centered-3 {
+  //     #{$self}__text {
+  //       order: 1;
+  //       font-size: rem(30px);
+  //       line-height: rem(38px);
+
+  //       @include bp(md) {
+  //         font-size: rem(48px);
+  //         line-height: rem(60px);
+  //       }
+  //     }
+
+  //     #{$self}__author {
+  //       order: 2;
+  //       font-weight: $font-weight-medium;
+  //       margin-bottom: 40px;
+
+  //       @include bp(md) {
+  //         margin-bottom: 48px;
+  //       }
+  //     }
+
+  //     #{$self}__logos {
+  //       order: 3;
+  //     }
+  //   }
+}

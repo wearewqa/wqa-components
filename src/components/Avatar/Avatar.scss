@@ -1,0 +1,53 @@
+@import "../../scss/core/global";
+
+$avatar--xsmall-size: 24px;
+$avatar--small-size: 32px;
+$avatar--medium-size: 40px;
+$avatar--large-size: 48px;
+$avatar--xlarge-size: 56px;
+$avatar--xxlarge-size: 64px;
+
+.avatar {
+  $self: &;
+
+  position: relative;
+  border-radius: 100%;
+  margin: 0;
+  overflow: hidden;
+
+  &__image {
+    display: block;
+    margin: 0;
+  }
+
+  // Size modifiers
+  &--xsmall {
+    width: $avatar--xsmall-size;
+    height: $avatar--xsmall-size;
+  }
+
+  &--small {
+    width: $avatar--small-size;
+    height: $avatar--small-size;
+  }
+
+  &--medium {
+    width: $avatar--medium-size;
+    height: $avatar--medium-size;
+  }
+
+  &--large {
+    width: $avatar--large-size;
+    height: $avatar--large-size;
+  }
+
+  &--xlarge {
+    width: $avatar--xlarge-size;
+    height: $avatar--xlarge-size;
+  }
+
+  &--xxlarge {
+    width: $avatar--xxlarge-size;
+    height: $avatar--xxlarge-size;
+  }
+}

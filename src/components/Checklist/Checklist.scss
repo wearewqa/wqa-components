@@ -1,0 +1,114 @@
+@import "../../scss/core/global";
+
+$checklist__item-margin: 16px;
+
+.checklist {
+  $self: &;
+
+  @include plain-list;
+
+  color: $color-gray-500;
+  margin-bottom: -$checklist__item-margin;
+  font-size: rem(16px);
+  line-height: rem(24px);
+  padding-left: 8px;
+
+  @include bp(md) {
+    font-size: rem(18px);
+    line-height: rem(28px);
+    padding-left: 16px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: $checklist__item-margin;
+  }
+
+  &__icon {
+    margin-right: 12px;
+    width: 28px;
+    height: 28px;
+  }
+
+  // Colors
+  &--primary {
+    #{$self}__check {
+      fill: $color-primary-500;
+    }
+    #{$self}__circle {
+      fill: $color-primary-100;
+    }
+  }
+
+  &--success,
+  &__item--success {
+    #{$self}__check {
+      fill: $color-success-500;
+    }
+    #{$self}__circle {
+      fill: $color-success-100;
+    }
+  }
+
+  // Sizes
+  &--small {
+    font-size: rem(16px);
+    line-height: rem(24px);
+
+    #{$self}__icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  //   &--medium {  // same as default - probably not needed
+  //     font-size: rem(16px);
+  //     line-height: rem(24px);
+
+  //     #{$self}__icon {
+  //       width: 28px;
+  //       height: 28px;
+  //     }
+
+  //     @include bp(md) {
+  //       font-size: rem(18px);
+  //       line-height: rem(28px);
+  //     }
+  //   }
+
+  &--large {
+    font-size: rem(18px);
+    line-height: rem(28px);
+
+    #{$self}__icon {
+      width: 28px;
+      height: 28px;
+
+      @include bp(md) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  &--xlarge {
+    font-size: rem(18px);
+    line-height: rem(28px);
+
+    @include bp(md) {
+      font-size: rem(20px);
+      line-height: rem(30px);
+    }
+
+    #{$self}__icon {
+      width: 32px;
+      height: 32px;
+
+      @include bp(md) {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+}
