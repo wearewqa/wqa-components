@@ -6,7 +6,7 @@ import { Story, Meta } from "@storybook/react";
 
 import SocialMenu from "./index";
 import SocialMenuItem from "../SocialMenuItem";
-import Icon from "../Icon/Icon";
+import { IconSize } from "../../enums/IconSize";
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -20,26 +20,15 @@ const Template: Story<ComponentProps<typeof SocialMenu>> = (args) => <SocialMenu
 export const Default = Template.bind({});
 Default.args = {
   type: "primary",
+  size: "xsmall",
   children: (
     <>
-      <SocialMenuItem href="#twitter" title="Twitter">
-        <Icon name="social-twitter" />
-      </SocialMenuItem>
-      <SocialMenuItem href="#linkedin" title="LinkedIn">
-        <Icon name="social-linkedin" />
-      </SocialMenuItem>
-      <SocialMenuItem href="#facebook" title="Facebook">
-        <Icon name="social-facebook" />
-      </SocialMenuItem>
-      <SocialMenuItem href="#github" title="GitHub">
-        <Icon name="social-github" />
-      </SocialMenuItem>
-      <SocialMenuItem href="#angellist" title="AngelList">
-        <Icon name="social-angellist" />
-      </SocialMenuItem>
-      <SocialMenuItem href="#dribbble" title="Dribbble">
-        <Icon name="social-dribbble" />
-      </SocialMenuItem>
+      <SocialMenuItem href="#twitter" title="Twitter" name="social-twitter" size={IconSize.xsmall} />
+      <SocialMenuItem href="#linkedin" title="LinkedIn" name="social-linkedin" size={IconSize.xsmall} />
+      <SocialMenuItem href="#facebook" title="Facebook" name="social-facebook" size={IconSize.xsmall} />
+      <SocialMenuItem href="#github" title="GitHub" name="social-github" size={IconSize.xsmall} />
+      <SocialMenuItem href="#angellist" title="AngelList" name="social-angellist" size={IconSize.xsmall} />
+      <SocialMenuItem href="#dribbble" title="Dribbble" name="social-dribbble" size={IconSize.xsmall} />
     </>
   ),
 };
