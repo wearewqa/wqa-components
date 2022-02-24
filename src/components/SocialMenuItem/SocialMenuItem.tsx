@@ -1,16 +1,17 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
+import Icon from "../Icon";
 
 type SocialMenuItemProps = {
   type?: "primary" | "secondary" | "tertiary";
   href: string;
   title: string;
+  iconName: string;
   code?: boolean;
-  children: React.ReactNode;
 };
 
-function SocialMenuItem({ type, href, title, code, children }: SocialMenuItemProps): JSX.Element {
+function SocialMenuItem({ type, href, title, iconName, code }: SocialMenuItemProps): JSX.Element {
   const baseClassName = "social-menu__item";
   const typeClassName = type ? `${baseClassName}--${type}` : "";
   const classNames = classnames(baseClassName, typeClassName);
@@ -18,7 +19,7 @@ function SocialMenuItem({ type, href, title, code, children }: SocialMenuItemPro
     <>
       <li className={`${classNames}`}>
         <a href={href} className="social-menu__link">
-          {children}
+          <Icon name={iconName} className="social-menu__icon" />
           <span className="visuallyhidden">{title}</span>
         </a>
       </li>
