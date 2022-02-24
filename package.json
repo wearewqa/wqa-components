@@ -1,6 +1,6 @@
 {
   "name": "@wearewqa/wqa-components",
-  "version": "1.0.11",
+  "version": "1.0.15",
   "description": "",
   "publishConfig": {
     "registry": "https://www.npmjs.com/wearewqa",
