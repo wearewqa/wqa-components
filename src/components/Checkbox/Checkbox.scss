@@ -3,7 +3,7 @@
 .checkbox {
   $self: &;
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-size: 14px;
   line-height: 22px;
@@ -13,12 +13,10 @@
     appearance: none;
     background-color: transparent;
     margin: 0;
-    font: inherit;
     width: 16px;
     height: 16px;
     border: 1px solid $color-gray-300;
     border-radius: 4px;
-    transform: translateY(-0.075em);
     display: grid;
     place-content: center;
     margin-right: 8px;
@@ -78,6 +76,11 @@
       width: 20px;
       height: 20px;
       border-radius: 6px;
+
+      &::before {
+        width: 12px;
+        height: 12px;
+      }
     }
 
     #{$self}__helper {
