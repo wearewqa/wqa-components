@@ -17,5 +17,5 @@ const Template: Story<ComponentProps<typeof Icon>> = (args) => <Icon {...args} /
 
 export const Primary = Template.bind({});
 Primary.args = {
-  name: "check",
+  name: "mail-outline",
 };
