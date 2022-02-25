@@ -36,7 +36,7 @@ const Icon: React.FC<Props> = ({ name, className = "", size }) => {
     default:
       break;
   }
-  return <SVG src={`../../icons/icon-${name}.svg`} width={width} height={height} className={className} />;
+  return <SVG src={`icons/icon-${name}.svg`} width={width} height={height} className={className} />;
 };
 
 export default Icon;
