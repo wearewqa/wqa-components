@@ -22,14 +22,13 @@
     margin-right: 8px;
 
     &::before {
-      display: none;
       content: "";
       width: 6px;
       height: 6px;
       border-radius: 100%;
-      // transform: scale(0);
-      // transform-origin: center center;
-      // transition: 100ms transform ease-in-out;
+      transform: scale(0);
+      transform-origin: center center;
+      transition: 100ms transform ease-in-out;
       // box-shadow: inset 1em 1em $color-blue-600;
       background-color: $color-blue-600;
     }
@@ -39,8 +38,7 @@
       border-color: $color-primary-600;
 
       &::before {
-        display: block;
-        // transform: scale(1);
+        transform: scale(1);
       }
     }
 
