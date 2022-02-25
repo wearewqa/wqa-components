@@ -8,7 +8,7 @@ import Image from "./index";
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: "Components/Image",
+  title: "Components/Images/Image",
   component: Image,
 } as Meta;
 

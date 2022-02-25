@@ -9,7 +9,7 @@ import Button from "../Button";
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: "Components/Button Group",
+  title: "Components/Buttons & Links/Button Group",
   component: ButtonGroup,
 } as Meta;
 

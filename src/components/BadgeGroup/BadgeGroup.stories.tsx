@@ -9,7 +9,7 @@ import Badge from "../Badge";
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: "Components/Badge Group",
+  title: "Components/Badges/Badge Group",
   component: BadgeGroup,
 } as Meta;
 

@@ -6,7 +6,7 @@ import Badge from "./index";
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: "Components/Badge",
+  title: "Components/Badges/Badge",
   component: Badge,
 } as Meta;
 

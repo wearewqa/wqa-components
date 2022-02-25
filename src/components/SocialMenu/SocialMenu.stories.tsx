@@ -10,7 +10,7 @@ import { IconSize } from "../../enums/IconSize";
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: "Components/SocialMenu",
+  title: "Components/Buttons & Links/Social Menu",
   component: SocialMenu,
 } as Meta;
 
@@ -19,8 +19,7 @@ const Template: Story<ComponentProps<typeof SocialMenu>> = (args) => <SocialMenu
 
 export const Default = Template.bind({});
 Default.args = {
-  type: "primary",
-  size: "xsmall",
+  color: "primary",
   children: (
     <>
       <SocialMenuItem href="#twitter" title="Twitter" name="social-twitter" size={IconSize.xsmall} />

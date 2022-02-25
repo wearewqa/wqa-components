@@ -8,7 +8,7 @@ import ProgressLink from "./index";
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: "Components/Progress Link",
+  title: "Components/Buttons & Links/Progress Link",
   component: ProgressLink,
 } as Meta;
 
