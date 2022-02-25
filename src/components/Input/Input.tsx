@@ -4,27 +4,25 @@ import classnames from "classnames";
 import "./Input.scss";
 
 type InputProps = {
-  color?: "primary" | "secondary" | "tertiary";
   labelText: string;
   titleText?: string;
-  nameText?: string;
+  hintText?: string;
   placeholder?: string;
   disabledAttr?: boolean;
+  cssModifier?: string;
   code?: boolean;
 };
 
-function Input({ color, labelText, titleText, nameText, placeholder, disabledAttr, code }: InputProps): JSX.Element {
+function Input({ labelText, titleText, hintText,  placeholder, disabledAttr, cssModifier, code }: InputProps): JSX.Element {
   const baseClassName = "input";
-  titleText = "Search";
-  nameText = "search";
-  disabledAttr = disabledAttr ? true : false;
-  const colorClassName = color ? `${baseClassName}--${color}` : "";
-  const classNames = classnames(baseClassName, colorClassName);
+  const modifierClassName = cssModifier ? `${baseClassName}--${cssModifier}` : "";
+  const classNames = classnames(baseClassName, modifierClassName);
   const html = (
     <>
       <label className={`${classNames}`}>
-        {labelText}:
-        <input type="text" className={`${baseClassName}__field` + ""} name={nameText} title={titleText} placeholder={placeholder} disabled={disabledAttr} />
+        <span className={`${baseClassName}__label-text`}>{labelText}:</span>
+        <input type="text" className={`${baseClassName}__field`} placeholder={placeholder} disabled={disabledAttr} title={titleText} />
+        <span className={`${baseClassName}__hint`}>{hintText}</span>
       </label>
     </>
   );

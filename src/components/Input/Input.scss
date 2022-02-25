@@ -1,5 +1,37 @@
 @import "../../scss/core/global";
 
-input {
+.input {
   $self: &;
+  display: flex;
+  flex-direction: column;
+
+  &__label-text {
+    color: $color-gray-700;
+    font-size: rem(14px);
+    line-height: rem(20px);
+    font-weight: $font-weight-bold;
+    padding-bottom: 6px;
+  }
+  &__field {
+    border: 1px solid $color-gray-300;
+    border-radius: 8px;
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: rem(16px);
+    line-height: rem(24px);
+    color: $color-gray-900;
+    &::placeholder {
+      color: $color-gray-500;
+    }
+    &[disabled],
+    &[disabled="true"] {
+      background-color: $color-gray-50;
+    }
+  }
+  &__hint {
+    color: $color-gray-500;
+    font-size: rem(14px);
+    line-height: rem(20px);
+    padding-top: 6px;
+  }
 }
