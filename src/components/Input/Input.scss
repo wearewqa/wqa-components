@@ -4,11 +4,12 @@
   $self: &;
   display: flex;
   flex-direction: column;
+  font-size: rem(14px);
+  line-height: rem(20px);
 
   &__label-text {
     color: $color-gray-700;
-    font-size: rem(14px);
-    line-height: rem(20px);
+
     font-weight: $font-weight-bold;
     padding-bottom: 6px;
   }
@@ -27,11 +28,30 @@
     &[disabled="true"] {
       background-color: $color-gray-50;
     }
+    &:focus {
+      border-color: $color-primary-300;
+      outline: 4px solid $color-primary-100;
+    }
   }
   &__hint {
     color: $color-gray-500;
-    font-size: rem(14px);
-    line-height: rem(20px);
     padding-top: 6px;
+  }
+  // use hint for both messages:?
+  // &__error {
+  //   color: $color-error-500;
+  //   padding-top: 6px;
+  // }
+  &--error {
+    #{$self}__hint {
+      color: $color-error-500;
+    }
+    #{$self}__field {
+      border-color: $color-error-500;
+      &:focus {
+        border-color: $color-error-300;
+        outline: 4px solid $color-error-100;
+      }
+    }
   }
 }

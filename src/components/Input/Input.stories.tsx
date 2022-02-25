@@ -18,9 +18,32 @@ const Template: Story<ComponentProps<typeof Input>> = (args) => <Input {...args}
 export const Default = Template.bind({});
 Default.args = {
   labelText: "Email",
+  hideLabel: true,
   placeholder: "olivia@untitledui.com",
   disabledAttr: false,
   titleText: "Search...",
+};
+
+export const Hint = Template.bind({});
+Hint.args = {
+  labelText: "Email",
+  hideLabel: true,
+  placeholder: "olivia@untitledui.com",
   hintText: "This is a hint text to help user.",
-  cssModifier: "red",
+};
+
+export const Label = Template.bind({});
+Label.args = {
+  labelText: "Email",
+  hideLabel: false,
+  placeholder: "olivia@untitledui.com",
+};
+
+export const Error = Template.bind({});
+Error.args = {
+  labelText: "Email",
+  hideLabel: false,
+  errorMessage: "This is an error message.",
+  placeholder: "olivia@untitledui.com",
+  cssModifier: "error"
 };
