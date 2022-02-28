@@ -39,6 +39,14 @@ Label.args = {
   placeholder: "olivia@untitledui.com",
 };
 
+export const HintAndLabel = Template.bind({});
+HintAndLabel.args = {
+  labelText: "Email",
+  hideLabel: false,
+  placeholder: "olivia@untitledui.com",
+  hintText: "This is a hint text to help user."
+};
+
 export const Error = Template.bind({});
 Error.args = {
   labelText: "Email",

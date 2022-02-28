@@ -3,6 +3,7 @@ import React from "react";
 import classnames from "classnames";
 import "./Input.scss";
 import Icon from "../Icon/Icon";
+import { IconSize } from "../../enums/IconSize";
 
 type InputProps = {
   labelText: string;
@@ -26,9 +27,10 @@ function Input({ labelText, hideLabel, titleText, hintText,  placeholder, disabl
       <label className={`${classNames}`}>
         <span className={`${baseClassName}__label-text ${hidden}`}>{labelText}:</span>
 
-        {errorMessage ? <Icon name="minus-circle" /> : ""}
-        <input type="text" className={`${baseClassName}__field`} placeholder={placeholder} disabled={disabledAttr} title={titleText} />
-
+        <span className={`${baseClassName}__field-wrap`}>
+          {errorMessage ? <Icon name="alert-circle" className={`${baseClassName}__icon`} size={IconSize.xsmall} /> : ""}
+          <input type="text" className={`${baseClassName}__field`} placeholder={placeholder} disabled={disabledAttr} title={titleText} />
+        </span>
         {hintText ? <span className={`${baseClassName}__hint`}>{hintText}</span> : ""}
         {errorMessage ? <span className={`${baseClassName}__hint`}>{errorMessage}</span> : ""}
       </label>
