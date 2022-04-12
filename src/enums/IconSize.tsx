@@ -1,7 +1,7 @@
 export enum IconSize {
-  "xsmall",
-  "small",
-  "medium",
-  "large",
-  "xlarge",
+  xsmall = "xsmall",
+  small = "small",
+  medium = "medium",
+  large = "large",
+  xlarge = "xlarge",
 }

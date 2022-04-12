@@ -1,0 +1,66 @@
+@import "../../scss/core/global";
+
+.input {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  font-size: rem(14px);
+  line-height: rem(20px);
+
+  &__label-text {
+    color: $color-gray-700;
+
+    font-weight: $font-weight-bold;
+    padding-bottom: 6px;
+  }
+  &__field-wrap {
+    position: relative;
+  }
+  &__field {
+    width: 100%;
+    border: 1px solid $color-gray-300;
+    border-radius: 8px;
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: rem(16px);
+    line-height: rem(24px);
+    color: $color-gray-900;
+    &::placeholder {
+      color: $color-gray-500;
+    }
+    &[disabled],
+    &[disabled="true"] {
+      background-color: $color-gray-50;
+    }
+    &:focus {
+      border-color: $color-primary-300;
+      outline: 4px solid $color-primary-100;
+    }
+  }
+  &__icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  &__hint {
+    color: $color-gray-500;
+    padding-top: 6px;
+  }
+  // use hint for both messages:?
+  // &__error {
+  //   color: $color-error-500;
+  //   padding-top: 6px;
+  // }
+  &--error {
+    #{$self}__hint {
+      color: $color-error-500;
+    }
+    #{$self}__field {
+      border-color: $color-error-500;
+      &:focus {
+        border-color: $color-error-300;
+        outline: 4px solid $color-error-100;
+      }
+    }
+  }
+}
