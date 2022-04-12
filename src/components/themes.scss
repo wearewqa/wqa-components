@@ -1,0 +1,10 @@
+:root {
+  --button-border-radius: 8px;
+}
+.theme--simple {
+  --button-border-radius: 0;
+}
+
+.theme--material {
+  --button-border-radius: 20px;
+}

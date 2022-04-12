@@ -2,10 +2,11 @@ import React from "react";
 //import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import "./Button.scss";
-
+import "../themes.scss";
 interface Props {
   color: "primary" | "secondary" | "secondary-gray" | "tertiary" | "tertiary-gray";
   size: "small" | "medium" | "large" | "xlarge" | "xxlarge";
+  theme: "default" | "simple" | "material";
   href?: string;
   icon?: boolean;
   iconReverse?: boolean;
@@ -15,16 +16,17 @@ interface Props {
   code?: boolean;
 }
 
-const Button = ({ color, size, href, icon, iconReverse, fullWidth, groupItem, children, code }: Props) => {
+const Button = ({ color, size, theme, href, icon, iconReverse, fullWidth, groupItem, children, code }: Props) => {
   const baseClassName = "button";
   const colorClassName = color ? `${baseClassName}--${color}` : "";
+  const themeClassName = theme ? `theme--${theme}` : "";
   const sizeClassName = size ? `${baseClassName}--${size}` : "";
   const iconClassName = icon ? `${baseClassName}--icon` : "";
   const iconReverseClassName = iconReverse ? `${baseClassName}--rev` : "";
   const fullWidthClassName = fullWidth ? `${baseClassName}--full` : "";
   const groupItemClassName = groupItem ? "button-group__item" : "";
   const link = href ? href : "#";
-  const classNames = classnames(groupItemClassName, baseClassName, colorClassName, sizeClassName, iconClassName, iconReverseClassName, fullWidthClassName);
+  const classNames = classnames(groupItemClassName, baseClassName, colorClassName, sizeClassName, iconClassName, iconReverseClassName, fullWidthClassName, themeClassName);
   const html = (
     <>
       <a href={link} className={`${classNames}`}>
