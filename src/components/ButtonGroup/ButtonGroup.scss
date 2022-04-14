@@ -111,7 +111,7 @@
   }
 
   &--rev-xs {
-    @include bp(sm-max) {
+    @include bp(xs) {
       flex-direction: column-reverse;
 
       #{$self}__item {

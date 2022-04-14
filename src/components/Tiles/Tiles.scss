@@ -52,7 +52,7 @@
       }
 
       &:not(#{$self}__content--flush-mob) {
-        @include bp(sm-max) {
+        @include bp(xs) {
           padding-left: $container-padding;
           padding-right: $container-padding;
         }
@@ -167,7 +167,7 @@
 
       &--media {
         &:not(#{$self}__content--flush-mob) {
-          @include bp(sm-max) {
+          @include bp(xs) {
             padding-left: $container-padding;
             padding-right: $container-padding;
           }
