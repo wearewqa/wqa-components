@@ -6,7 +6,7 @@ import Button from "./Button";
 describe("Button", () => {
   test("renders the Button component", () => {
     render(
-      <Button color="primary" size="medium">
+      <Button type="primary" size="medium">
         Hello World!!
       </Button>
     );

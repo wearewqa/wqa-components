@@ -1,10 +1,263 @@
+@import "../scss/core/global";
+
+/* stylelint-disable */
 :root {
-  --button-border-radius: 8px;
-}
-.theme--simple {
-  --button-border-radius: 0;
+  // BUTTON
+  --button-border-radius: 5px;
+  --button-font-weight: 500;
+  --button-min-width: 0;
+  --button-transition: none;
+  // type: primary
+  --button--primary-background-color: #333;
+  --button--primary-color: #fff;
+  --button--primary-border: 0;
+  --button--primary-box-shadow: none;
+  --button--primary--hover-background-color: #222;
+  --button--primary--hover-color: #fff;
+  --button--primary--hover-border: none;
+  --button--primary--hover-box-shadow: none;
+  --button--primary--focus-background-color: #999;
+  --button--primary--focus-color: #fff;
+  --button--primary--focus-outline: none;
+  --button--primary--focus-border: none;
+  --button--primary--focus-box-shadow: none;
+  --button--primary--disabled-background-color: #ccc;
+  --button--primary--disabled-color: #fff;
+  --button--primary--disabled-border: 0;
+  // type: secondary
+  --button--secondary-background-color: #666;
+  --button--secondary-color: #fff;
+  --button--secondary-border: 0;
+  --button--secondary-box-shadow: none;
+  --button--secondary--hover-background-color: #555;
+  --button--secondary--hover-color: #fff;
+  --button--secondary--hover-border: none;
+  --button--secondary--hover-box-shadow: none;
+  --button--secondary--focus-background-color: #999;
+  --button--secondary--focus-color: #fff;
+  --button--secondary--focus-outline: none;
+  --button--secondary--focus-border: none;
+  --button--secondary--focus-box-shadow: none;
+  --button--secondary--disabled-background-color: #ddd;
+  --button--secondary--disabled-color: #fff;
+  --button--secondary--disabled-border: 0;
+  // type: tertiary
+  --button--tertiary-background-color: #ddd;
+  --button--tertiary-color: #000;
+  --button--tertiary-border: 0 solid transparent;
+  --button--tertiary-box-shadow: none;
+  --button--tertiary--hover-background-color: #bbb;
+  --button--tertiary--hover-color: #fff;
+  --button--tertiary--hover-border: none;
+  --button--tertiary--hover-box-shadow: none;
+  --button--tertiary--focus-background-color: #999;
+  --button--tertiary--focus-color: #fff;
+  --button--tertiary--focus-outline: none;
+  --button--tertiary--focus-border: none;
+  --button--tertiary--focus-box-shadow: none;
+  --button--tertiary--disabled-background-color: #eee;
+  --button--tertiary--disabled-color: #bbb;
+  --button--tertiary--disabled-border: 0;
+  // size: small
+  --button--small-min-width: 0;
+  --button--small-min-width--md: 0;
+  --button--small-padding: 5px 10px;
+  --button--small-min-height: 30px;
+  --button--small-min-height--md: 36px;
+  --button--small-font-size: #{rem(12px)};
+  --button--small-font-size--md: #{rem(14px)};
+  --button--small-line-height: #{rem(16px)};
+  --button--small-line-height--md: #{rem(18px)};
+  // size: medium
+  --button--medium-min-width: 0;
+  --button--medium-min-width--md: 0;
+  --button--medium-padding: 6px 12px;
+  --button--medium-min-height: 36px;
+  --button--medium-min-height--md: 40px;
+  --button--medium-font-size: #{rem(14px)};
+  --button--medium-font-size--md: #{rem(16px)};
+  --button--medium-line-height: #{rem(20px)};
+  --button--medium-line-height--md: #{rem(22px)};
+  // size: large
+  --button--large-min-width: 0;
+  --button--large-min-width--md: 0;
+  --button--large-padding: 8px 16px;
+  --button--large-min-height: 40px;
+  --button--large-min-height--md: 44px;
+  --button--large-font-size: #{rem(16px)};
+  --button--large-font-size--md: #{rem(18px)};
+  --button--large-line-height: #{rem(22px)};
+  --button--large-line-height--md: #{rem(24px)};
+  // size: xlarge
+  --button--xlarge-min-width: 0;
+  --button--xlarge-min-width--md: 0;
+  --button--xlarge-padding: 18px 36px;
+  --button--xlarge-min-height: 44px;
+  --button--xlarge-min-height--md: 48px;
+  --button--xlarge-font-size: #{rem(16px)};
+  --button--xlarge-font-size--md: #{rem(18px)};
+  --button--xlarge-line-height: #{rem(22px)};
+  --button--xlarge-line-height--md: #{rem(24px)};
+  // size: xxlarge
+  --button--xxlarge-min-width: 0;
+  --button--xxlarge-min-width--md: 0;
+  --button--xxlarge-padding: 20px 44px;
+  --button--xxlarge-min-height: 54px;
+  --button--xxlarge-min-height--md: 64px;
+  --button--xxlarge-font-size: #{rem(18px)};
+  --button--xxlarge-font-size--md: #{rem(20px)};
+  --button--xxlarge-line-height: #{rem(24px)};
+  --button--xxlarge-line-height--md: #{rem(28px)};
 }
 
-.theme--material {
-  --button-border-radius: 20px;
+// WQA THEME
+.is-wqa {
+  // BUTTON
+  --button-border-radius: 5px;
+  // type: primary
+  --button--primary-background-color: #000;
+  // type: secondary
+  --button--secondary-background-color: #fff;
+  --button--secondary-color: #000;
+}
+
+// DOTERRA THEME
+.is-doterra {
+  // BUTTON
+  --button-border-radius: 40px;
+  --button-font-weight: 700;
+  --button-min-width: 220px;
+  --button-transition: all 0.3s;
+  // type: primary
+  --button--primary-background-color: #9d57b2;
+  --button--primary-border: 2px solid #bd8bca;
+  --button--primary--hover-background-color: #a25eb5;
+  --button--primary--hover-border: 2px solid #a25eb5;
+  --button--primary--hover-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+  --button--primary--focus-background-color: #b267c5;
+  --button--primary--disabled-background-color: #e3cfe9;
+  --button--primary--disabled-border: 2px solid transparent;
+  // type: secondary
+  --button--secondary-background-color: #fff;
+  --button--secondary-color: #9d57b2;
+  --button--secondary-border: 2px solid #fff;
+  --button--secondary--hover-background-color: #9d57b2;
+  --button--secondary--hover-color: #fff;
+  --button--secondary--hover-border: 2px solid transparent;
+  --button--secondary--hover-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+  --button--secondary--focus-background-color: #fff;
+  --button--secondary--focus-color: #9d57b2;
+  --button--secondary--disabled-background-color: #e3cfe9;
+  --button--secondary--disabled-color: #fff;
+  --button--secondary--disabled-border: 2px solid transparent;
+  // type: tertiary
+  --button--tertiary-background-color: #eee;
+  --button--tertiary-color: #5597e2;
+  --button--tertiary-border: 2px solid transparent;
+  --button--tertiary--hover-background-color: #eee;
+  --button--tertiary--hover-color: #5597e2;
+  --button--tertiary--hover-border: 2px solid transparent;
+  --button--tertiary--hover-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+  --button--tertiary--focus-background-color: #eee;
+  --button--tertiary--focus-color: #5597e2;
+  --button--tertiary--disabled-background-color: #f8f8f8;
+  --button--tertiary--disabled-color: #bbd5f3;
+  --button--tertiary--disabled-border: 2px solid transparent;
+  // size: small
+  --button--small-min-width: 80px;
+  --button--small-min-width--md: 100px;
+  --button--small-padding: 8px 15px 9px;
+  // size: medium
+  --button--medium-min-width: 100px;
+  --button--medium-min-width--md: 100px;
+  --button--medium-padding: 8px 20px 9px;
+  // size: large
+  --button--large-min-width: 220px;
+  --button--large-min-width--md: 220px;
+  --button--large-padding: 17px 20px 18px;
+  --button--large-font-size: #{rem(17.6px)};
+  --button--large-font-size--md: #{rem(17.6px)};
+  --button--large-line-height: #{rem(21.12px)};
+  --button--large-line-height--md: #{rem(21.12px)};
+  // size: xlarge
+  --button--xlarge-min-width: 220px;
+  --button--xlarge-min-width--md: 220px;
+  // size: xxlarge
+  --button--xxlarge-min-width: 220px;
+  --button--xxlarge-min-width--md: 220px;
+}
+
+// CILA THEME
+.is-cila {
+  // BUTTON
+  --button-border-radius: 8px;
+  --button-font-weight: 500;
+  // type: primary
+  --button--primary-box-shadow: 0px 1px 2px rgba(#101828, 0.05);
+  --button--primary-background-color: #06f;
+  --button--primary--hover-background-color: #0052cd;
+  --button--primary--focus-background-color: #06f;
+  --button--primary--focus-color: #fff;
+  --button--primary--focus-outline: 4px solid #e5f0ff;
+  --button--primary--disabled-background-color: #cce0ff;
+  // type: secondary
+  --button--secondary-box-shadow: 0px 1px 2px rgba(#101828, 0.05);
+  --button--secondary-background-color: #f2f7ff;
+  --button--secondary-color: #0052cd;
+  --button--secondary--hover-background-color: #e5f0ff;
+  --button--secondary--hover-color: #0052cd;
+  --button--secondary--focus-background-color: #f2f7ff;
+  --button--secondary--focus-color: #0052cd;
+  --button--secondary--focus-outline: 4px solid #e5f0ff;
+  --button--secondary--disabled-background-color: #f9fbff;
+  --button--secondary--disabled-color: #b3d1ff;
+  // type: tertiary
+  --button--tertiary-background-color: #fff;
+  --button--tertiary-color: #0052cd;
+  --button--tertiary--hover-background-color: #f2f7ff;
+  --button--tertiary--hover-color: #0052cd;
+  --button--tertiary--focus-background-color: #fff;
+  --button--tertiary--focus-color: #0052cd;
+  --button--tertiary--disabled-background-color: #fff;
+  --button--tertiary--disabled-color: #d0d5dd;
+  // size: small
+  --button--small-padding: 5px 14px;
+  --button--small-min-height: 36px;
+  --button--small-min-height--md: 36px;
+  --button--small-font-size: #{rem(14px)};
+  --button--small-font-size--md: #{rem(14px)};
+  --button--small-line-height: #{rem(20px)};
+  --button--small-line-height--md: #{rem(20px)};
+  // size: medium
+  --button--medium-padding: 5px 16px;
+  --button--medium-min-height: 40px;
+  --button--medium-min-height--md: 40px;
+  --button--medium-font-size: #{rem(14px)};
+  --button--medium-font-size--md: #{rem(14px)};
+  --button--medium-line-height: #{rem(20px)};
+  --button--medium-line-height--md: #{rem(20px)};
+  // size: large
+  --button--large-padding: 5px 18px;
+  --button--large-min-height: 44px;
+  --button--large-min-height--md: 44px;
+  --button--large-font-size: #{rem(16px)};
+  --button--large-font-size--md: #{rem(16px)};
+  --button--large-line-height: #{rem(24px)};
+  --button--large-line-height--md: #{rem(24px)};
+  // size: xlarge
+  --button--xlarge-padding: 5px 20px;
+  --button--xlarge-min-height: 48px;
+  --button--xlarge-min-height--md: 48px;
+  --button--xlarge-font-size: #{rem(16px)};
+  --button--xlarge-font-size--md: #{rem(16px)};
+  --button--xlarge-line-height: #{rem(24px)};
+  --button--xlarge-line-height--md: #{rem(24px)};
+  // size: xxlarge
+  --button--xxlarge-padding: 5px 32px;
+  --button--xxlarge-min-height: 60px;
+  --button--xxlarge-min-height--md: 60px;
+  --button--xxlarge-font-size: #{rem(18px)};
+  --button--xxlarge-font-size--md: #{rem(18px)};
+  --button--xxlarge-line-height: #{rem(28px)};
+  --button--xxlarge-line-height--md: #{rem(28px)};
 }
