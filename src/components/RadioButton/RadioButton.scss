@@ -4,7 +4,6 @@
   $self: &;
 
   display: inline-flex;
-  align-items: center;
   font-size: 14px;
   line-height: 22px;
   cursor: pointer;
@@ -12,10 +11,10 @@
   &__field {
     appearance: none;
     background-color: transparent;
-    margin: 0;
+    margin: 3px 0 0;
     width: 16px;
     height: 16px;
-    border: 1px solid $color-gray-300;
+    border: var(--radio-button__field-border);
     border-radius: 100%;
     display: grid;
     place-content: center;
@@ -29,27 +28,37 @@
       transform: scale(0);
       transform-origin: center center;
       transition: 100ms transform ease-in-out;
-      background-color: $color-blue-600;
+      background-color: var(--radio-button-dot-color);
+    }
+
+    &:focus {
+      border: var(--radio-button--focus__field-border);
+      outline: var(--radio-button--focus__field-outline);
     }
 
     &:checked {
-      outline: 4px solid $color-primary-50;
-      border-color: $color-primary-600;
+      background-color: var(--radio-button--checked__field-background-color);
+      border: var(--radio-button--checked__field-border);
 
       &::before {
         transform: scale(1);
       }
     }
 
-    &:focus {
-      outline: 4px solid $color-primary-50;
+    &:disabled {
+      background-color: var(--radio-button--disabled__field-background-color);
+      border: var(--radio-button--disabled__field-border);
+
+      &::before {
+        background-color: var(--radio-button--disabled-dot-color);
+      }
     }
   }
 
   &:hover {
     #{$self}__field {
-      background-color: $color-primary-50;
-      border-color: $color-primary-600;
+      background-color: var(--checkbox--hover__field-background-color);
+      border: var(--checkbox--hover__field-border);
     }
   }
 
@@ -59,13 +68,15 @@
   }
 
   &__label {
+    color: var(--radio-button__label-color);
     font-weight: $font-weight-medium;
   }
 
   &__helper {
-    color: $color-gray-500;
+    color: var(--radio-button__helper-color);
   }
 
+  // sizes
   &--medium {
     font-size: 16px;
     line-height: 24px;
@@ -83,6 +94,17 @@
 
     #{$self}__helper {
       margin-top: 2px;
+    }
+  }
+
+  // disabled radio button
+  &--disabled {
+    cursor: not-allowed;
+    color: var(--radio-button--disabled-color);
+
+    #{$self}__label,
+    #{$self}__helper {
+      color: currentcolor;
     }
   }
 }

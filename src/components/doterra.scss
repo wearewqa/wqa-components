@@ -1,0 +1,69 @@
+@import "../scss/core/global";
+
+/* stylelint-disable */
+
+// DOTERRA THEME
+.is-doterra {
+  // BUTTON
+  --button-border-radius: 40px;
+  --button-font-weight: $font-weight-bold;
+  --button-min-width: 220px;
+  --button-transition: all 0.3s;
+  // type: primary
+  --button--primary-background-color: #9d57b2;
+  --button--primary-border: 2px solid #bd8bca;
+  --button--primary--hover-background-color: #a25eb5;
+  --button--primary--hover-border: 2px solid #a25eb5;
+  --button--primary--hover-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+  --button--primary--focus-background-color: #b267c5;
+  --button--primary--disabled-background-color: #e3cfe9;
+  --button--primary--disabled-border: 2px solid transparent;
+  // type: secondary
+  --button--secondary-background-color: #{$color-white};
+  --button--secondary-color: #9d57b2;
+  --button--secondary-border: 2px solid #{$color-white};
+  --button--secondary--hover-background-color: #9d57b2;
+  --button--secondary--hover-color: #{$color-white};
+  --button--secondary--hover-border: 2px solid transparent;
+  --button--secondary--hover-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+  --button--secondary--focus-background-color: #{$color-white};
+  --button--secondary--focus-color: #9d57b2;
+  --button--secondary--disabled-background-color: #e3cfe9;
+  --button--secondary--disabled-color: #{$color-white};
+  --button--secondary--disabled-border: 2px solid transparent;
+  // type: tertiary
+  --button--tertiary-background-color: #eee;
+  --button--tertiary-color: #5597e2;
+  --button--tertiary-border: 2px solid transparent;
+  --button--tertiary--hover-background-color: #eee;
+  --button--tertiary--hover-color: #5597e2;
+  --button--tertiary--hover-border: 2px solid transparent;
+  --button--tertiary--hover-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+  --button--tertiary--focus-background-color: #eee;
+  --button--tertiary--focus-color: #5597e2;
+  --button--tertiary--disabled-background-color: #f8f8f8;
+  --button--tertiary--disabled-color: #bbd5f3;
+  --button--tertiary--disabled-border: 2px solid transparent;
+  // size: small
+  --button--small-min-width: 80px;
+  --button--small-min-width--md: 100px;
+  --button--small-padding: 8px 15px 9px;
+  // size: medium
+  --button--medium-min-width: 100px;
+  --button--medium-min-width--md: 100px;
+  --button--medium-padding: 8px 20px 9px;
+  // size: large
+  --button--large-min-width: 220px;
+  --button--large-min-width--md: 220px;
+  --button--large-padding: 17px 20px 18px;
+  --button--large-font-size: #{rem(17.6px)};
+  --button--large-font-size--md: #{rem(17.6px)};
+  --button--large-line-height: #{rem(21.12px)};
+  --button--large-line-height--md: #{rem(21.12px)};
+  // size: xlarge
+  --button--xlarge-min-width: 220px;
+  --button--xlarge-min-width--md: 220px;
+  // size: xxlarge
+  --button--xxlarge-min-width: 220px;
+  --button--xxlarge-min-width--md: 220px;
+}

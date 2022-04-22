@@ -2,64 +2,74 @@
 
 .input {
   $self: &;
+
   display: flex;
   flex-direction: column;
   font-size: rem(14px);
   line-height: rem(20px);
 
-  &__label-text {
-    color: $color-gray-700;
-
+  &__label {
+    color: var(--input__label-color);
     font-weight: $font-weight-bold;
     padding-bottom: 6px;
   }
+
   &__field-wrap {
     position: relative;
   }
+
   &__field {
+    color: var(--input__field-color);
     width: 100%;
-    border: 1px solid $color-gray-300;
-    border-radius: 8px;
-    min-height: 44px;
-    padding: 10px 14px;
+    border: var(--input__field-border);
+    border-radius: var(--input__field-border-radius);
+    min-height: var(--input__field-min-height);
+    padding: var(--input__field-padding);
     font-size: rem(16px);
     line-height: rem(24px);
-    color: $color-gray-900;
-    &::placeholder {
-      color: $color-gray-500;
+
+    @include placeholder {
+      color: var(--input__field-placeholder-color);
     }
-    &[disabled],
-    &[disabled="true"] {
-      background-color: $color-gray-50;
+
+    &[disabled] {
+      background-color: var(--input--disabled__field-background-color);
     }
+
     &:focus {
-      border-color: $color-primary-300;
-      outline: 4px solid $color-primary-100;
+      border: var(--input--focus__field-border);
+      outline: var(--input--focus__field-outline);
     }
   }
+
   &__icon {
     position: absolute;
     right: 10px;
     top: 10px;
   }
+
   &__hint {
-    color: $color-gray-500;
+    color: var(--input__hint-color);
     padding-top: 6px;
   }
+
   // use hint for both messages:?
   // &__error {
   //   color: $color-error-500;
   //   padding-top: 6px;
   // }
+
   &--error {
     #{$self}__hint {
-      color: $color-error-500;
+      color: var(--input--error__hint-color);
     }
+
     #{$self}__field {
-      border-color: $color-error-500;
+      border-color: var(--input--error__field-border);
+
       &:focus {
-        border-color: $color-error-300;
-        outline: 4px solid $color-error-100;
+        border-color: var(--input--error__field--focus-border);
+        outline: var(--input--error__field--focus-outline);
       }
     }
   }

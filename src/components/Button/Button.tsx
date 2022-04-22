@@ -1,14 +1,16 @@
 import React from "react";
 //import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
+import { Attributes } from "react";
 import { Themes } from "../../enums/Themes";
 import "./Button.scss";
 import "../themes.scss";
 
 interface Props {
   theme: Themes;
-  //   type: "primary" | "secondary" | "tertiary"; // | "tertiary-gray" | "secondary-gray";
+  type: "primary" | "secondary" | "tertiary"; // | "tertiary-gray" | "secondary-gray";
   size: "small" | "medium" | "large" | "xlarge" | "xxlarge";
+  disabled?: boolean;
   href?: string;
   icon?: boolean;
   iconReverse?: boolean;
@@ -18,24 +20,33 @@ interface Props {
   code?: boolean;
 }
 
-const Button = ({ /* type,*/ size, theme, href, icon, iconReverse, fullWidth, groupItem, children, code }: Props) => {
+const Button = ({ theme, type, size, disabled, href, icon, iconReverse, fullWidth, groupItem, children, code }: Props) => {
   const baseClassName = "button";
-  //   const typeClassName = type ? `${baseClassName}--${type}` : "";
   const themeClassName = theme ? `is-${theme}` : "";
+  const typeClassName = type ? `${baseClassName}--${type}` : "";
   const sizeClassName = size ? `${baseClassName}--${size}` : "";
+  const disabledClassName = disabled ? "is-disabled" : "";
   const iconClassName = icon ? `${baseClassName}--icon` : "";
   const iconReverseClassName = iconReverse ? `${baseClassName}--rev` : "";
   const fullWidthClassName = fullWidth ? `${baseClassName}--full` : "";
   const groupItemClassName = groupItem ? "button-group__item" : "";
-  const link = href ? href : "#";
-  const classNames = classnames(groupItemClassName, baseClassName, /*typeClassName,*/ sizeClassName, iconClassName, iconReverseClassName, fullWidthClassName, themeClassName);
+  const link = href;
+  const classNames = classnames(groupItemClassName, baseClassName, typeClassName, sizeClassName, disabledClassName, iconClassName, iconReverseClassName, fullWidthClassName, themeClassName);
+
   const html = (
     <>
-      {/* <a href={link} className={`${classNames}`}>
-        {children}
-      </a> */}
+      {link && (
+        <a href={link} className={`${classNames}`}>
+          {children}
+        </a>
+      )}
+      {!link && (
+        <button type="button" className={`${classNames}`} disabled={disabled}>
+          {children}
+        </button>
+      )}
 
-      <h2>Buttons</h2>
+      {/* <h2>Buttons</h2>
       <div className="button-group">
         <a href={link} className={`${classNames}` + " button-group__item button--primary"}>
           Primary button
@@ -59,7 +70,7 @@ const Button = ({ /* type,*/ size, theme, href, icon, iconReverse, fullWidth, gr
         <button type="button" className={`${classNames}` + " button-group__item button--tertiary is-disabled"}>
           Tertiary button
         </button>
-      </div>
+      </div> */}
     </>
   );
   // const htmlString = ReactDOMServer.renderToStaticMarkup(html);

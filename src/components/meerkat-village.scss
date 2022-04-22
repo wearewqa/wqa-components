@@ -1,0 +1,122 @@
+@import "../scss/core/global";
+
+/* stylelint-disable */
+
+// MEERKAT VILLAGE THEME
+.is-meerkat-village {
+  // BUTTON
+  --button-border-radius: 8px;
+  --button-font-weight: #{$font-weight-medium};
+  // type: primary
+  --button--primary-box-shadow: 0px 1px 2px rgba(#{$color-gray-900}, 0.05);
+  --button--primary-background-color: #ff781c;
+  --button--primary-border: 1px solid transparent;
+  --button--primary--hover-background-color: #cc6016;
+  --button--primary--focus-background-color: #ff781c;
+  --button--primary--focus-color: #{$color-white};
+  --button--primary--focus-outline: 4px solid #f6f6ff;
+  --button--primary--disabled-background-color: #ffd7bb;
+  // type: secondary
+  --button--secondary-box-shadow: 0px 1px 2px rgba(#{$color-gray-900}, 0.05);
+  --button--secondary-background-color: #fff2e8;
+  --button--secondary-color: #cc6016;
+  --button--secondary-border: 1px solid transparent;
+  --button--secondary--hover-background-color: #ffe4d2;
+  --button--secondary--hover-color: #cc6016;
+  --button--secondary--hover-border: 1px solid transparent;
+  --button--secondary--focus-background-color: #fff2e8;
+  --button--secondary--focus-color: #cc6016;
+  --button--secondary--focus-outline: 4px solid #f6f6ff;
+  --button--secondary--focus-border: 1px solid transparent;
+  --button--secondary--disabled-background-color: #fff8f4;
+  --button--secondary--disabled-color: #ffc9a4;
+  // type: tertiary
+  --button--tertiary-background-color: #{$color-white};
+  --button--tertiary-border: 1px solid #{$color-gray-300};
+  --button--tertiary-color: #{$color-gray-700};
+  --button--tertiary--hover-background-color: #{$color-gray-50};
+  --button--tertiary--hover-color: #{$color-gray-800};
+  --button--tertiary--hover-border: 1px solid #{$color-gray-300};
+  --button--tertiary--focus-background-color: #{$color-white};
+  --button--tertiary--focus-color: #{$color-gray-700};
+  --button--tertiary--focus-border: 1px solid #{$color-gray-300};
+  --button--tertiary--focus-outline: 4px solid #f6f6ff;
+  --button--tertiary--disabled-background-color: #{$color-white};
+  --button--tertiary--disabled-color: #{$color-gray-300};
+  --button--tertiary--disabled-border: 1px solid #{$color-gray-200};
+  // size: small
+  --button--small-padding: 5px 14px;
+  --button--small-min-height: 36px;
+  --button--small-min-height--md: 36px;
+  --button--small-font-size: #{rem(14px)};
+  --button--small-font-size--md: #{rem(14px)};
+  --button--small-line-height: #{rem(20px)};
+  --button--small-line-height--md: #{rem(20px)};
+  // size: medium
+  --button--medium-padding: 5px 16px;
+  --button--medium-min-height: 40px;
+  --button--medium-min-height--md: 40px;
+  --button--medium-font-size: #{rem(14px)};
+  --button--medium-font-size--md: #{rem(14px)};
+  --button--medium-line-height: #{rem(20px)};
+  --button--medium-line-height--md: #{rem(20px)};
+  // size: large
+  --button--large-padding: 5px 18px;
+  --button--large-min-height: 44px;
+  --button--large-min-height--md: 44px;
+  --button--large-font-size: #{rem(16px)};
+  --button--large-font-size--md: #{rem(16px)};
+  --button--large-line-height: #{rem(24px)};
+  --button--large-line-height--md: #{rem(24px)};
+  // size: xlarge
+  --button--xlarge-padding: 5px 20px;
+  --button--xlarge-min-height: 48px;
+  --button--xlarge-min-height--md: 48px;
+  --button--xlarge-font-size: #{rem(16px)};
+  --button--xlarge-font-size--md: #{rem(16px)};
+  --button--xlarge-line-height: #{rem(24px)};
+  --button--xlarge-line-height--md: #{rem(24px)};
+  // size: xxlarge
+  --button--xxlarge-padding: 5px 32px;
+  --button--xxlarge-min-height: 60px;
+  --button--xxlarge-min-height--md: 60px;
+  --button--xxlarge-font-size: #{rem(18px)};
+  --button--xxlarge-font-size--md: #{rem(18px)};
+  --button--xxlarge-line-height: #{rem(28px)};
+  --button--xxlarge-line-height--md: #{rem(28px)};
+
+  // INPUT (to do)
+  //   --input__label-color: #{$color-gray-700};
+  //   --input__field-color: #{$color-gray-900};
+  //   --input__field-border: 1px solid #{$color-gray-300};
+  //   --input__field-border-radius: 8px;
+  //   --input__field-min-height: 44px;
+  //   --input__field-padding: 10px 14px;
+  //   --input__field-placeholder-color: #{$color-gray-500};
+  //   --input--disabled__field-background-color: #{$color-gray-50};
+  //   --input--focus__field-border: 1px solid #{$color-primary-300};
+  //   --input--focus__field-outline: 4px solid #{$color-primary-100};
+  //   --input__hint-color: #{$color-gray-500};
+  //   --input--error__hint-color: #{$color-error-500};
+  //   --input--error__field-border: 1px solid #{$color-error-500};
+  //   --input--error__field--focus-border: 1px solid #{$color-error-300};
+  //   --input--error__field--focus-outline: 4px solid #{$color-error-100};
+
+  // CHECKBOX
+  --checkbox-tick-color: #ff781c;
+  --checkbox--focus__field-border: 1px solid #ffc9a4;
+  --checkbox--focus__field-outline: 4px solid #f6f6ff;
+  --checkbox--checked__field-background-color: #fff2e8;
+  --checkbox--checked__field-border: 1px solid #ff781c;
+  --checkbox--hover__field-background-color: #fff2e8;
+  --checkbox--hover__field-border: 1px solid #ff781c;
+
+  // RADIO BUTTON
+  --radio-button-dot-color: #ff781c;
+  --radio-button--focus__field-border: 1px solid #ffc9a4;
+  --radio-button--focus__field-outline: 4px solid #f6f6ff;
+  --radio-button--checked__field-background-color: #fff2e8;
+  --radio-button--checked__field-border: 1px solid #ff781c;
+  --radio-button--hover__field-background-color: #fff2e8;
+  --radio-button--hover__field-border: 1px solid #{$color-black};
+}

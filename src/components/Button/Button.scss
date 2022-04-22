@@ -40,6 +40,7 @@
         background-color: var(--button--primary--focus-background-color);
         color: var(--button--primary--focus-color);
         outline: var(--button--primary--focus-outline);
+        border: var(--button--primary--focus-border);
         box-shadow: var(--button--primary--focus-box-shadow);
       }
 
@@ -75,6 +76,7 @@
         background-color: var(--button--secondary--focus-background-color);
         color: var(--button--secondary--focus-color);
         outline: var(--button--secondary--focus-outline);
+        border: var(--button--secondary--focus-border);
         box-shadow: var(--button--secondary--focus-box-shadow);
       }
 
@@ -139,6 +141,8 @@
       &:focus {
         background-color: var(--button--tertiary--focus-background-color);
         color: var(--button--tertiary--focus-color);
+        outline: var(--button--tertiary--focus-outline);
+        border: var(--button--tertiary--focus-border);
         box-shadow: var(--button--tertiary--focus-box-shadow);
       }
 

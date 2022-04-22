@@ -1,6 +1,8 @@
 export enum Themes {
   "default" = "default",
-  "wqa" = "wqa",
-  "cila" = "cila",
+  // "wqa" = "wqa",
+  "business-toolkit" = "business-toolkit",
+  "kancld" = "kancld",
+  "meerkat-village" = "meerkat-village",
   "doterra" = "doterra",
 }

@@ -17,10 +17,15 @@ const Template: Story<ComponentProps<typeof RadioButton>> = (args) => <RadioButt
 
 export const Default = Template.bind({});
 Default.args = {
-  // size: "medium",
+  size: "medium",
+  labelText: "Remember me...",
+  helperText: "Save my login details for next time",
+  disabled: false,
+};
+export const Disabled = Template.bind({});
+Disabled.args = {
+  size: "medium",
   labelText: "Remember me...",
   helperText: "Save my login details for next time",
   disabled: true,
-  // checked: true,
-  // hiddenLabel: true,
 };
