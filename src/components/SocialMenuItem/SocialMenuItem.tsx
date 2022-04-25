@@ -5,7 +5,7 @@ import Icon from "../Icon";
 import { IconSize } from "../../enums/IconSize";
 
 type SocialMenuItemProps = {
-  color?: "primary" | "secondary" | "tertiary";
+  // color?: "primary" | "secondary" | "tertiary";
   href: string;
   title: string;
   name: string;
@@ -13,10 +13,10 @@ type SocialMenuItemProps = {
   code?: boolean;
 };
 
-function SocialMenuItem({ color, href, title, name, size, code }: SocialMenuItemProps): JSX.Element {
+function SocialMenuItem({ /*color,*/ href, title, name, size, code }: SocialMenuItemProps): JSX.Element {
   const baseClassName = "social-menu__item";
-  const colorClassName = color ? `${baseClassName}--${color}` : "";
-  const classNames = classnames(baseClassName, colorClassName);
+  // const colorClassName = color ? `${baseClassName}--${color}` : "";
+  const classNames = classnames(baseClassName /*, colorClassName */);
   const html = (
     <>
       <li className={`${classNames}`}>

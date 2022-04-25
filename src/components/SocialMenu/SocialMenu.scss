@@ -18,9 +18,19 @@
     }
   }
 
+  &__icon * {
+    fill: var(--social-menu__icon-fill);
+  }
+
   &__link {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+      #{$self}__icon * {
+        fill: var(--social-menu__icon--hover-fill);
+      }
+    }
   }
 }
