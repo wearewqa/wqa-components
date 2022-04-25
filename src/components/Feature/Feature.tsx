@@ -5,9 +5,11 @@ import Icon from "../Icon/Icon";
 import { IconSize } from "../../enums/IconSize";
 import ProgressLink from "../ProgressLink/ProgressLink";
 import "./Feature.scss";
+import { Themes } from "../../enums/Themes";
 
 type FeatureProps = {
-  color?: "primary-light" | "primary-dark" | "gray-light" | "gray-dark";
+  // color?: "primary-light" | "primary-dark" | "gray-light" | "gray-dark";
+  theme: Themes;
   layout?: "column" | "row" | "row-indent" | "block" | "block-row";
   iconName: string;
   title?: string;
@@ -18,11 +20,12 @@ type FeatureProps = {
   code?: boolean;
 };
 
-function Feature({ color, layout, iconName, title, text, linkHref, linkText, modifierClass, code }: FeatureProps): JSX.Element {
+function Feature({ /*color, */ theme, layout, iconName, title, text, linkHref, linkText, modifierClass, code }: FeatureProps): JSX.Element {
   const baseClassName = "feature";
-  const colorClassName = color ? `${baseClassName}--${color}` : "";
+  const themeClassName = theme ? `is-${theme}` : "";
+  // const colorClassName = color ? `${baseClassName}--${color}` : "";
   const layoutClassName = layout ? `${baseClassName}--${layout}` : "";
-  const classNames = classnames(baseClassName, colorClassName, layoutClassName, modifierClass);
+  const classNames = classnames(baseClassName, /*colorClassName,*/ layoutClassName, modifierClass, themeClassName);
   const html = (
     <>
       <div className={`${classNames}`}>
