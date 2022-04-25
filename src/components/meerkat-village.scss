@@ -89,9 +89,6 @@
   //   --input__label-color: #{$color-gray-700};
   //   --input__field-color: #{$color-gray-900};
   //   --input__field-border: 1px solid #{$color-gray-300};
-  //   --input__field-border-radius: 8px;
-  //   --input__field-min-height: 44px;
-  //   --input__field-padding: 10px 14px;
   //   --input__field-placeholder-color: #{$color-gray-500};
   //   --input--disabled__field-background-color: #{$color-gray-50};
   //   --input--focus__field-border: 1px solid #{$color-primary-300};
@@ -119,4 +116,27 @@
   --radio-button--checked__field-border: 1px solid #ff781c;
   --radio-button--hover__field-background-color: #fff2e8;
   --radio-button--hover__field-border: 1px solid #{$color-black};
+
+  // STAT
+  --stat__value-color: #ff781c;
+
+  // CHECKLIST
+  --checklist--primary__check-fill: #ff9349;
+  --checklist--primary__circle-fill: #ffe4d2;
+
+  // ICON
+  --icon__glyph-stroke: #ff781c;
+  --icon__inner-fill: #ffe4d2;
+  --icon__outer-fill: #fff2e8;
+
+  // FEATURE
+  --feature__title-color: #363f72;
+
+  // PROGRESS LINK
+  --progress-link-color: #cc6016;
+
+  // BADGE
+  --badge-background-color: #fff2e8;
+  --badge-color: #cc6016;
+  --badge__icon-stroke: #ff9349;
 }
