@@ -22,9 +22,9 @@
     color: var(--input__field-color);
     width: 100%;
     border: var(--input__field-border);
-    border-radius: var(--input__field-border-radius);
-    min-height: var(--input__field-min-height);
-    padding: var(--input__field-padding);
+    border-radius: 8px;
+    min-height: 44px;
+    padding: 10px 14px;
     font-size: rem(16px);
     line-height: rem(24px);
 
@@ -65,10 +65,10 @@
     }
 
     #{$self}__field {
-      border-color: var(--input--error__field-border);
+      border: var(--input--error__field-border);
 
       &:focus {
-        border-color: var(--input--error__field--focus-border);
+        border: var(--input--error__field--focus-border);
         outline: var(--input--error__field--focus-outline);
       }
     }
