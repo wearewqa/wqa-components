@@ -3,6 +3,7 @@ import React, { ComponentProps } from "react";
 import { Story, Meta } from "@storybook/react";
 
 import Badge from "./index";
+import { Themes } from "../../enums/Themes";
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -15,7 +16,8 @@ const Template: Story<ComponentProps<typeof Badge>> = (args) => <Badge {...args}
 
 export const Primary = Template.bind({});
 Primary.args = {
-  color: "primary",
+  theme: Themes.default,
+  type: "primary",
   size: "small",
   children: "Badge",
 };

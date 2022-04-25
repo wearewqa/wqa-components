@@ -2,9 +2,12 @@ import React from "react";
 //import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import "./Badge.scss";
+import { Themes } from "../../enums/Themes";
 
 type BadgeProps = {
-  color?: "gray" | "primary" | "error" | "warning" | "gray" | "success" | "blue-gray" | "blue-light" | "blue" | "indigo" | "purple" | "pink" | "rose" | "orange";
+  theme: Themes;
+  type: "primary" | "error" | "warning" | "success";
+  // color?: "gray" | "primary" | "error" | "warning" | "gray" | "success" | "blue-gray" | "blue-light" | "blue" | "indigo" | "purple" | "pink" | "rose" | "orange";
   size?: "small" | "medium" | "large"; // | "xlarge" | "xxlarge";
   iconReverse?: boolean;
   groupItem?: boolean;
@@ -13,14 +16,16 @@ type BadgeProps = {
   children: React.ReactNode;
 };
 
-function Badge({ color, size, iconReverse, groupItem, highlighted, code, children }: BadgeProps): JSX.Element {
+function Badge({ /*color*/ theme, type, size, iconReverse, groupItem, highlighted, code, children }: BadgeProps): JSX.Element {
   const baseClassName = "badge";
-  const colorClassName = color ? `${baseClassName}--${color}` : "";
+  const themeClassName = theme ? `is-${theme}` : "";
+  const typeClassName = type ? `${baseClassName}--${type}` : "";
+  // const colorClassName = color ? `${baseClassName}--${color}` : "";
   const sizeClassName = size ? `${baseClassName}--${size}` : "";
   const groupItemClassName = groupItem ? "badge-group__item" : "";
   const iconReverseClassName = iconReverse ? `${baseClassName}--rev` : "";
   const highlightedClassName = highlighted ? "badge-group__item--highlighted" : "";
-  const classNames = classnames(groupItemClassName, highlightedClassName, baseClassName, colorClassName, sizeClassName, iconReverseClassName);
+  const classNames = classnames(groupItemClassName, highlightedClassName, baseClassName, /*colorClassName,*/ typeClassName, sizeClassName, iconReverseClassName, themeClassName);
   const html = (
     <>
       <span className={`${classNames}`}>{children}</span>

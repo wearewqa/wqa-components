@@ -12,13 +12,16 @@
   font-weight: $font-weight-medium;
   font-size: rem(14px);
   line-height: rem(20px);
+  background-color: var(--badge-background-color);
+  color: var(--badge-color);
 
   &__icon {
     margin-left: 4px;
     margin-right: -2px;
     width: 16px;
     height: 16px;
-    stroke: currentColor;
+    stroke: var(--badge__icon-stroke); // $color-primary-500;
+    // stroke: currentColor;
   }
 
   // Sizes
@@ -56,11 +59,11 @@
   }
 
   &--primary {
-    background-color: $color-primary-50;
-    color: $color-primary-700;
+    // background-color: $color-primary-50;
+    // color: $color-primary-700;
 
     #{$self}__icon {
-      stroke: $color-primary-500;
+      // stroke: $color-primary-500;
     }
   }
 
@@ -83,48 +86,48 @@
     }
   }
 
-  &--blue-gray {
-    background-color: $color-blue-gray-50;
-    color: $color-blue-gray-700;
-  }
-
-  &--blue-light {
-    background-color: $color-blue-light-50;
-    color: $color-blue-light-700;
-  }
-
-  &--blue {
-    background-color: $color-blue-50;
-    color: $color-blue-700;
-  }
-
-  &--indigo {
-    background-color: $color-indigo-50;
-    color: $color-indigo-700;
-  }
-
-  &--purple {
-    background-color: $color-purple-50;
-    color: $color-purple-700;
-  }
-
-  &--pink {
-    background-color: $color-pink-50;
-    color: $color-pink-700;
-  }
-
-  &--rose {
-    background-color: $color-rose-50;
-    color: $color-rose-700;
-  }
-
-  &--orange {
-    background-color: $color-orange-50;
-    color: $color-orange-700;
-  }
-
   &--base {
     background-color: $color-white;
     color: $color-gray-700;
   }
+
+  // &--blue-gray {
+  //   background-color: $color-blue-gray-50;
+  //   color: $color-blue-gray-700;
+  // }
+
+  // &--blue-light {
+  //   background-color: $color-blue-light-50;
+  //   color: $color-blue-light-700;
+  // }
+
+  // &--blue {
+  //   background-color: $color-blue-50;
+  //   color: $color-blue-700;
+  // }
+
+  // &--indigo {
+  //   background-color: $color-indigo-50;
+  //   color: $color-indigo-700;
+  // }
+
+  // &--purple {
+  //   background-color: $color-purple-50;
+  //   color: $color-purple-700;
+  // }
+
+  // &--pink {
+  //   background-color: $color-pink-50;
+  //   color: $color-pink-700;
+  // }
+
+  // &--rose {
+  //   background-color: $color-rose-50;
+  //   color: $color-rose-700;
+  // }
+
+  // &--orange {
+  //   background-color: $color-orange-50;
+  //   color: $color-orange-700;
+  // }
 }
