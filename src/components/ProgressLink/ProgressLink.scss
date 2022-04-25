@@ -5,7 +5,7 @@
 
   display: inline-flex;
   background-color: transparent;
-  color: $color-primary-700;
+  color: var(--progress-link-color); // $color-primary-700;
   align-items: center;
   justify-content: center;
   text-decoration: none;
@@ -16,7 +16,7 @@
   line-height: rem(24px);
 
   &__icon {
-    stroke: $color-primary-700;
+    stroke: var(--progress-link-color);
     transition: transform 50ms;
     width: 20px;
     height: 20px;
@@ -26,7 +26,7 @@
   &:hover,
   &:focus,
   &:active {
-    color: $color-primary-700;
+    color: var(--progress-link-color);
 
     #{$self}__icon {
       transform: translateX(5px);

@@ -5,6 +5,7 @@ import React, { ComponentProps } from "react";
 import { Story, Meta } from "@storybook/react";
 
 import ProgressLink from "./index";
+import { Themes } from "../../enums/Themes";
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -17,5 +18,6 @@ const Template: Story<ComponentProps<typeof ProgressLink>> = (args) => <Progress
 
 export const Default = Template.bind({});
 Default.args = {
+  theme: Themes.default,
   children: "Read more",
 };

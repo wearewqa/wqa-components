@@ -3,18 +3,21 @@ import React from "react";
 import classnames from "classnames";
 import Icon from "../Icon/Icon";
 import "./ProgressLink.scss";
+import { Themes } from "../../enums/Themes";
 
 interface ProgressLinkProps {
+  theme: Themes;
   href?: string;
   cssClass?: string;
   code?: boolean;
   children: React.ReactNode;
 }
 
-const ProgressLink = ({ href, cssClass, code, children }: ProgressLinkProps) => {
+const ProgressLink = ({ theme, href, cssClass, code, children }: ProgressLinkProps) => {
   const baseClassName = "progress-link";
+  const themeClassName = theme ? `is-${theme}` : "";
   const link = href ? href : "#";
-  const classNames = classnames(baseClassName, cssClass);
+  const classNames = classnames(baseClassName, cssClass, themeClassName);
   const html = (
     <>
       <a href={link} className={`${classNames}`}>
