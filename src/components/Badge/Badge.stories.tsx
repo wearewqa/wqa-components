@@ -14,8 +14,8 @@ export default {
 //👇 We create a “template” of how args map to rendering
 const Template: Story<ComponentProps<typeof Badge>> = (args) => <Badge {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
   theme: Themes.default,
   type: "primary",
   size: "small",
