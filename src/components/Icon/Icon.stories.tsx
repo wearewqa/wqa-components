@@ -6,6 +6,7 @@ import { Story, Meta } from "@storybook/react";
 
 import Icon from "./Icon";
 import { IconSize } from "../../enums/IconSize";
+import { Themes } from "../../enums/Themes";
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -18,6 +19,7 @@ const Template: Story<ComponentProps<typeof Icon>> = (args) => <Icon {...args} /
 
 export const Primary = Template.bind({});
 Primary.args = {
+  theme: Themes.default,
   name: "mail-outline",
   size: IconSize.medium,
 };

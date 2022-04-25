@@ -1,14 +1,21 @@
 import React from "react";
 import SVG, { Props as SVGProps } from "react-inlinesvg";
+import classnames from "classnames";
 import { IconSize } from "../../enums/IconSize";
+import { Themes } from "../../enums/Themes";
+import "./Icon.scss";
 
 export interface Props {
+  theme: Themes;
   name: string;
   className?: string;
   size?: IconSize;
 }
 
-const Icon: React.FC<Props> = ({ name, className = "", size }) => {
+const Icon: React.FC<Props> = ({ theme, name, className = "", size }) => {
+  const baseClassName = "icon";
+  const themeClassName = theme ? `is-${theme}` : "";
+  const classNames = classnames(className, baseClassName, themeClassName);
   let width = 24;
   let height = 24;
   switch (size) {
@@ -36,7 +43,7 @@ const Icon: React.FC<Props> = ({ name, className = "", size }) => {
     default:
       break;
   }
-  return <SVG src={`icons/icon-${name}.svg`} width={width} height={height} className={className} />;
+  return <SVG src={`icons/icon-${name}.svg`} width={width} height={height} className={classNames} />;
 };
 
 export default Icon;

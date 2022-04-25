@@ -1,0 +1,17 @@
+@import "../../scss/core/global";
+
+.icon {
+  $self: &;
+
+  &__glyph {
+    stroke: var(--icon__glyph-stroke);
+  }
+
+  &__inner {
+    fill: var(--icon__inner-fill);
+  }
+
+  &__outer {
+    fill: var(--icon__outer-fill);
+  }
+}
