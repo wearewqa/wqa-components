@@ -92,9 +92,6 @@
   //   --input__label-color: #{$color-gray-700};
   //   --input__field-color: #{$color-gray-900};
   //   --input__field-border: 1px solid #{$color-gray-300};
-  //   --input__field-border-radius: 8px;
-  //   --input__field-min-height: 44px;
-  //   --input__field-padding: 10px 14px;
   //   --input__field-placeholder-color: #{$color-gray-500};
   //   --input--disabled__field-background-color: #{$color-gray-50};
   //   --input--focus__field-border: 1px solid #{$color-primary-300};
@@ -122,4 +119,27 @@
   --radio-button--checked__field-border: 1px solid #{$color-primary-600};
   --radio-button--hover__field-background-color: #{$color-primary-50};
   --radio-button--hover__field-border: 1px solid #{$color-black};
+
+  // STAT
+  --stat__value-color: #{$color-primary-600};
+
+  // CHECKLIST
+  --checklist--primary__check-fill: #{$color-primary-500};
+  --checklist--primary__circle-fill: #{$color-primary-100};
+
+  // ICON
+  --icon__glyph-stroke: #{$color-primary-600};
+  --icon__inner-fill: #{$color-primary-100};
+  --icon__outer-fill: #{$color-primary-50};
+
+  // FEATURE
+  --feature__title-color: #{$color-gray-900};
+
+  // PROGRESS LINK
+  --progress-link-color: #{$color-primary-700};
+
+  // BADGE
+  --badge-background-color: #{$color-primary-50};
+  --badge-color: #{$color-primary-700};
+  --badge__icon-stroke: #{$color-primary-500};
 }
