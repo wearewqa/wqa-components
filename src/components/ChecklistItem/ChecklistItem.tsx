@@ -2,17 +2,20 @@ import React from "react";
 // import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import Icon from "../Icon/Icon";
+import { Themes } from "../../enums/Themes";
 
 type ChecklistItemProps = {
-  color?: "primary" | "success";
+  theme?: Themes;
+  type?: "primary" | "success";
   code?: boolean;
   children: React.ReactNode;
 };
 
-function ChecklistItem({ color, code, children }: ChecklistItemProps): JSX.Element {
+function ChecklistItem({ theme, type, code, children }: ChecklistItemProps): JSX.Element {
   const baseClassName = "checklist__item";
-  const colorClassName = color ? `${baseClassName}--${color}` : "";
-  const classNames = classnames(baseClassName, colorClassName);
+  const themeClassName = theme ? `is-${theme}` : "";
+  const typeClassName = type ? `${baseClassName}--${type}` : "";
+  const classNames = classnames(baseClassName, typeClassName, themeClassName);
   const html = (
     <>
       <li className={`${classNames}`}>

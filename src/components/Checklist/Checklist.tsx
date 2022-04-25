@@ -2,20 +2,23 @@ import React from "react";
 //import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import "./Checklist.scss";
+import { Themes } from "../../enums/Themes";
 
 type ChecklistProps = {
-  color: "primary" | "success";
+  theme: Themes;
+  type: "primary" | "success";
   size?: "small" | "medium" | "large" | "xlarge";
   contextClassName?: string; // check approach w JC
   code?: boolean;
   children: React.ReactNode;
 };
 
-function Checklist({ color, size, contextClassName, code, children }: ChecklistProps): JSX.Element {
+function Checklist({ theme, type, size, contextClassName, code, children }: ChecklistProps): JSX.Element {
   const baseClassName = "checklist";
-  const colorClassName = color ? `${baseClassName}--${color}` : "";
+  const themeClassName = theme ? `is-${theme}` : "";
+  const typeClassName = type ? `${baseClassName}--${type}` : "";
   const sizeClassName = size ? `${baseClassName}--${size}` : "";
-  const classNames = classnames(baseClassName, colorClassName, sizeClassName, contextClassName);
+  const classNames = classnames(baseClassName, typeClassName, sizeClassName, contextClassName, themeClassName);
   const html = (
     <>
       <ul className={`${classNames}`}>{children}</ul>

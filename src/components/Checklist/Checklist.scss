@@ -31,13 +31,13 @@ $checklist__item-margin: 16px;
     height: 28px;
   }
 
-  // Colors
+  // Types
   &--primary {
     #{$self}__check {
-      fill: $color-primary-500;
+      fill: var(--checklist--primary__check-fill);
     }
     #{$self}__circle {
-      fill: $color-primary-100;
+      fill: var(--checklist--primary__circle-fill);
     }
   }
 
