@@ -5,6 +5,7 @@ import React, { ComponentProps } from "react";
 import { Story, Meta } from "@storybook/react";
 
 import Stat from "./index";
+import { Themes } from "../../enums/Themes";
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -17,7 +18,8 @@ const Template: Story<ComponentProps<typeof Stat>> = (args) => <Stat {...args} /
 
 export const Default = Template.bind({});
 Default.args = {
-  color: "primary-light",
+  //   color: "primary-light",
+  theme: Themes.default,
   value: "5000+",
   title: "Projects Completed",
   text: "We’ve helped build over 400 amazing projects.",
