@@ -1,6 +1,8 @@
 @import "../scss/core/global";
 
 /* stylelint-disable */
+
+// DEFAULT
 :root {
   // BUTTON
   --button-border-radius: 5px;
@@ -10,54 +12,54 @@
   // type: primary
   --button--primary-background-color: #333;
   --button--primary-color: #{$color-white};
-  --button--primary-border: 0;
+  --button--primary-border: 1px solid transparent;
   --button--primary-box-shadow: none;
   --button--primary--hover-background-color: #222;
   --button--primary--hover-color: #{$color-white};
-  --button--primary--hover-border: none;
+  --button--primary--hover-border: 1px solid transparent;
   --button--primary--hover-box-shadow: none;
   --button--primary--focus-background-color: #999;
   --button--primary--focus-color: #{$color-white};
   --button--primary--focus-outline: none;
-  --button--primary--focus-border: 0;
+  --button--primary--focus-border: 1px solid transparent;
   --button--primary--focus-box-shadow: none;
   --button--primary--disabled-background-color: #ccc;
   --button--primary--disabled-color: #{$color-white};
-  --button--primary--disabled-border: 0;
+  --button--primary--disabled-border: 1px solid transparent;
   // type: secondary
   --button--secondary-background-color: #666;
   --button--secondary-color: #{$color-white};
-  --button--secondary-border: 0;
+  --button--secondary-border: 1px solid transparent;
   --button--secondary-box-shadow: none;
   --button--secondary--hover-background-color: #555;
   --button--secondary--hover-color: #{$color-white};
-  --button--secondary--hover-border: 0;
+  --button--secondary--hover-border: 1px solid transparent;
   --button--secondary--hover-box-shadow: none;
   --button--secondary--focus-background-color: #999;
   --button--secondary--focus-color: #{$color-white};
   --button--secondary--focus-outline: none;
-  --button--secondary--focus-border: 0;
+  --button--secondary--focus-border: 1px solid transparent;
   --button--secondary--focus-box-shadow: none;
   --button--secondary--disabled-background-color: #ddd;
   --button--secondary--disabled-color: #{$color-white};
-  --button--secondary--disabled-border: 0;
+  --button--secondary--disabled-border: 1px solid transparent;
   // type: tertiary
   --button--tertiary-background-color: #ddd;
   --button--tertiary-color: #{$color-black};
-  --button--tertiary-border: 0;
+  --button--tertiary-border: 1px solid transparent;
   --button--tertiary-box-shadow: none;
   --button--tertiary--hover-background-color: #bbb;
   --button--tertiary--hover-color: #{$color-white};
-  --button--tertiary--hover-border: none;
+  --button--tertiary--hover-border: 1px solid transparent;
   --button--tertiary--hover-box-shadow: none;
   --button--tertiary--focus-background-color: #999;
   --button--tertiary--focus-color: #{$color-white};
   --button--tertiary--focus-outline: none;
-  --button--tertiary--focus-border: 0;
+  --button--tertiary--focus-border: 1px solid transparent;
   --button--tertiary--focus-box-shadow: none;
   --button--tertiary--disabled-background-color: #eee;
   --button--tertiary--disabled-color: #bbb;
-  --button--tertiary--disabled-border: 0;
+  --button--tertiary--disabled-border: 1px solid transparent;
   // size: small
   --button--small-min-width: 0;
   --button--small-min-width--md: 0;
@@ -111,13 +113,7 @@
 
   // INPUT
   --input__label-color: #{$color-black};
-  --input__label-font-weight: #{$font-weight-medium};
   --input__field-border: 1px solid #999;
-  --input__field-border-radius: 5px;
-  --input__field-min-height: 40px;
-  --input__field-padding: 5px 10px;
-  --input__field-font-size: rem(16px);
-  --input__field-line-height: rem(24px);
   --input__field-color: #111;
   --input__field-placeholder-color: #999;
   --input--disabled__field-background-color: #eee;
@@ -125,7 +121,7 @@
   --input--focus__field-outline: 4px solid #ddd;
   --input__hint-color: #333;
   --input--error__hint-color: #c00;
-  --input--error__field-border: #c00;
+  --input--error__field-border: 1px solid #c00;
   --input--error__field--focus-border: 1px solid #c00;
   --input--error__field--focus-outline: 1px solid #c00;
 
@@ -159,9 +155,37 @@
   --radio-button--hover__field-border: 1px solid #{$color-black};
   --radio-button__label-color: #{$color-gray-700};
   --radio-button__helper-color: #{$color-gray-500};
+
+  // STAT
+  --stat__value-color: #{$color-black};
+
+  // CHECKLIST
+  --checklist--primary__check-fill: #{$color-black};
+  --checklist--primary__circle-fill: #ddd;
+
+  // ICON
+  --icon__glyph-stroke: #{$color-black};
+  --icon__inner-fill: #ddd;
+  --icon__outer-fill: #eee;
+
+  // SOCIAL MENU
+  --social-menu__icon-fill: #{$color-gray-400};
+  --social-menu__icon--hover-fill: #{$color-gray-500};
+
+  // FEATURE
+  --feature__title-color: #{$color-black};
+
+  // PROGRESS LINK
+  --progress-link-color: #111;
+
+  // BADGE
+  --badge-background-color: #{$color-gray-100};
+  --badge-color: #{$color-gray-700};
+  --badge__icon-stroke: #{$color-gray-500};
 }
 
 // THEMES
 @import "doterra";
 @import "business-toolkit";
 @import "meerkat-village";
+@import "kancld";
