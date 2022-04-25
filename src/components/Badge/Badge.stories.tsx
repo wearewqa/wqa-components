@@ -17,7 +17,6 @@ const Template: Story<ComponentProps<typeof Badge>> = (args) => <Badge {...args}
 export const Default = Template.bind({});
 Default.args = {
   theme: Themes.default,
-  type: "primary",
-  size: "small",
+  size: "medium",
   children: "Badge",
 };

@@ -6,7 +6,7 @@ import { Themes } from "../../enums/Themes";
 
 type BadgeProps = {
   theme: Themes;
-  type: "error" | "warning" | "success";
+  type?: "error" | "warning" | "success";
   // color?: "gray" | "primary" | "error" | "warning" | "gray" | "success" | "blue-gray" | "blue-light" | "blue" | "indigo" | "purple" | "pink" | "rose" | "orange";
   size?: "small" | "medium" | "large"; // | "xlarge" | "xxlarge";
   iconReverse?: boolean;

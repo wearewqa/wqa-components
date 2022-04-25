@@ -20,7 +20,7 @@
     margin-right: -2px;
     width: 16px;
     height: 16px;
-    stroke: var(--badge__icon-stroke); // $color-primary-500;
+    stroke: var(--badge__icon-stroke);
     // stroke: currentColor;
   }
 
@@ -51,13 +51,6 @@
     }
   }
 
-  // Colors
-  // "gray" | "primary" | "error" | "warning" | "success" | "blue-gray" | "blue-light" | "blue" | "indigo" | "purple" | "pink" | "rose" | "orange"
-  &--gray {
-    background-color: $color-gray-100;
-    color: $color-gray-700;
-  }
-
   &--primary {
     // background-color: $color-primary-50;
     // color: $color-primary-700;
@@ -67,6 +60,7 @@
     }
   }
 
+  // Types
   &--error {
     background-color: $color-error-50;
     color: $color-error-700;
@@ -91,6 +85,12 @@
     color: $color-gray-700;
   }
 
+  // Colors
+  // "gray" | "primary" | "error" | "warning" | "success" | "blue-gray" | "blue-light" | "blue" | "indigo" | "purple" | "pink" | "rose" | "orange"
+  // &--gray {
+  //   background-color: $color-gray-100;
+  //   color: $color-gray-700;
+  // }
   // &--blue-gray {
   //   background-color: $color-blue-gray-50;
   //   color: $color-blue-gray-700;
