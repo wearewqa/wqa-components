@@ -2,10 +2,10 @@ import React from "react";
 //import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import "./Badge.scss";
-import { Themes } from "../../enums/Themes";
+import { Theme } from "../../enums/Theme";
 
 type BadgeProps = {
-  theme: Themes;
+  theme: Theme;
   type?: "error" | "warning" | "success";
   // color?: "gray" | "primary" | "error" | "warning" | "gray" | "success" | "blue-gray" | "blue-light" | "blue" | "indigo" | "purple" | "pink" | "rose" | "orange";
   size?: "small" | "medium" | "large"; // | "xlarge" | "xxlarge";

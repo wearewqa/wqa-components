@@ -2,10 +2,10 @@ import React from "react";
 //import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import "./Checklist.scss";
-import { Themes } from "../../enums/Themes";
+import { Theme } from "../../enums/Theme";
 
 type ChecklistProps = {
-  theme: Themes;
+  theme: Theme;
   type: "primary" | "success";
   size?: "small" | "medium" | "large" | "xlarge";
   contextClassName?: string; // check approach w JC

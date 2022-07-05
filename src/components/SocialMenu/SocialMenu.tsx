@@ -2,10 +2,10 @@ import React from "react";
 // import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import "./SocialMenu.scss";
-import { Themes } from "../../enums/Themes";
+import { Theme } from "../../enums/Theme";
 
 type SocialMenuProps = {
-  theme: Themes;
+  theme: Theme;
   //   color?: "primary" | "secondary" | "tertiary";
   code?: boolean;
   children: React.ReactNode;

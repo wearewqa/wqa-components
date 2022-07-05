@@ -1,10 +1,10 @@
 import React from "react";
 import classnames from "classnames";
 import "../themes.scss";
-import { Themes } from "../../enums/Themes";
+import { Theme } from "../../enums/Theme";
 
 interface Props {
-  theme: Themes;
+  theme: Theme;
   children: React.ReactNode;
 }
 

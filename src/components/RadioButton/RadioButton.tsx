@@ -1,7 +1,7 @@
 import React from "react";
 // import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
-import { Themes } from "../../enums/Themes";
+import { Themes } from "../../enums/Theme";
 import "./RadioButton.scss";
 
 type RadioButtonProps = {

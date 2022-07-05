@@ -2,10 +2,10 @@ import React from "react";
 // import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import "./Stat.scss";
-import { Themes } from "../../enums/Themes";
+import { Theme } from "../../enums/Theme";
 
 type StatProps = {
-  theme: Themes;
+  theme: Theme;
   //   color?: "primary-light" | "primary-dark" | "gray-light" | "gray-dark";
   value: string;
   title: string;

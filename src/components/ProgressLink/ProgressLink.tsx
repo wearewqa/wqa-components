@@ -3,10 +3,10 @@ import React from "react";
 import classnames from "classnames";
 import Icon from "../Icon/Icon";
 import "./ProgressLink.scss";
-import { Themes } from "../../enums/Themes";
+import { Theme } from "../../enums/Theme";
 
 interface ProgressLinkProps {
-  theme: Themes;
+  theme: Theme;
   href?: string;
   cssClass?: string;
   code?: boolean;

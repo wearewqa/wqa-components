@@ -5,7 +5,7 @@ import React, { ComponentProps } from "react";
 import { Story, Meta } from "@storybook/react";
 
 import Checkbox from "./index";
-import { Themes } from "../../enums/Themes";
+import { Themes } from "../../enums/Theme";
 
 //👇 This default export determines where your story goes in the story list
 export default {

@@ -2,12 +2,12 @@ import React from "react";
 //import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import { Attributes } from "react";
-import { Themes } from "../../enums/Themes";
+import { Theme } from "../../enums/Theme";
 import "./Button.scss";
 import "../themes.scss";
 
-interface Props {
-  theme: Themes;
+export interface Props {
+  theme?: Theme;
   type: "primary" | "secondary" | "tertiary"; // | "tertiary-gray" | "secondary-gray";
   size: "small" | "medium" | "large" | "xlarge" | "xxlarge";
   disabled?: boolean;
@@ -20,7 +20,7 @@ interface Props {
   code?: boolean;
 }
 
-const Button = ({ theme, type, size, disabled, href, icon, iconReverse, fullWidth, groupItem, children, code }: Props) => {
+const Button = ({ theme = Theme.Default, type, size, disabled, href, icon, iconReverse, fullWidth, groupItem, children, code }: Props) => {
   const baseClassName = "button";
   const themeClassName = theme ? `is-${theme}` : "";
   const typeClassName = type ? `${baseClassName}--${type}` : "";

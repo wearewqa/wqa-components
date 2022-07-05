@@ -1,5 +1,6 @@
-/src/**/*.tsx
-/src/**/*.ts
+**/*.tsx
+**/*.ts
+*.ts
 /*.js
 /dist
 webpack.config.*.js

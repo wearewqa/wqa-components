@@ -4,7 +4,7 @@ import classnames from "classnames";
 import "./Input.scss";
 import Icon from "../Icon/Icon";
 import { IconSize } from "../../enums/IconSize";
-import { Themes } from "../../enums/Themes";
+import { Themes } from "../../enums/Theme";
 
 type InputProps = {
   theme: Themes;

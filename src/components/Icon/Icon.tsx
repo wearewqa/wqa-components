@@ -2,11 +2,11 @@ import React from "react";
 import SVG, { Props as SVGProps } from "react-inlinesvg";
 import classnames from "classnames";
 import { IconSize } from "../../enums/IconSize";
-import { Themes } from "../../enums/Themes";
+import { Theme } from "../../enums/Theme";
 import "./Icon.scss";
 
 export interface Props {
-  theme: Themes;
+  theme: Theme;
   name: string;
   className?: string;
   size?: IconSize;

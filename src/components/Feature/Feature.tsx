@@ -5,11 +5,11 @@ import Icon from "../Icon/Icon";
 import { IconSize } from "../../enums/IconSize";
 import ProgressLink from "../ProgressLink/ProgressLink";
 import "./Feature.scss";
-import { Themes } from "../../enums/Themes";
+import { Theme } from "../../enums/Theme";
 
 type FeatureProps = {
   // color?: "primary-light" | "primary-dark" | "gray-light" | "gray-dark";
-  theme: Themes;
+  theme: Theme;
   layout?: "column" | "row" | "row-indent" | "block" | "block-row";
   iconName: string;
   title?: string;

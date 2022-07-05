@@ -2,10 +2,10 @@ import React from "react";
 // import ReactDOMServer from "react-dom/server";
 import classnames from "classnames";
 import Icon from "../Icon/Icon";
-import { Themes } from "../../enums/Themes";
+import { Theme } from "../../enums/Theme";
 
 type ChecklistItemProps = {
-  theme?: Themes;
+  theme?: Theme;
   type?: "primary" | "success";
   code?: boolean;
   children: React.ReactNode;
