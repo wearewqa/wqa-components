@@ -1,25 +1,24 @@
 // YourComponent.stories.ts | YourComponent.stories.tsx
 
-import React, { ComponentProps } from "react";
+import React from "react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { Story, Meta } from "@storybook/react";
-
-import Icon from "./Icon";
+import  Icon  from "./";
 import { IconSize } from "../../enums/IconSize";
-import { Themes } from "../../enums/Theme";
+import { Theme } from "../../enums/Theme";
 
 //👇 This default export determines where your story goes in the story list
 export default {
   title: "Components/Icon",
   component: Icon,
-} as Meta;
+} as ComponentMeta<typeof Icon>;
 
 //👇 We create a “template” of how args map to rendering
-const Template: Story<ComponentProps<typeof Icon>> = (args) => <Icon {...args} />;
+const Template: ComponentStory<typeof Icon> = (args) => (<Icon {...args} />);
 
 export const Primary = Template.bind({});
 Primary.args = {
-  theme: Themes.default,
+  theme: Theme.Default,
   name: "mail-outline",
   size: IconSize.medium,
 };

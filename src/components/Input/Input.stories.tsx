@@ -44,7 +44,7 @@ HintAndLabel.args = {
   labelText: "Email",
   hideLabel: false,
   placeholder: "olivia@untitledui.com",
-  hintText: "This is a hint text to help user."
+  hintText: "This is a hint text to help user.",
 };
 
 export const Error = Template.bind({});
@@ -53,5 +53,5 @@ Error.args = {
   hideLabel: false,
   errorMessage: "This is an error message.",
   placeholder: "olivia@untitledui.com",
-  cssModifier: "error"
+  cssModifier: "error",
 };

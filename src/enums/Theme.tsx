@@ -1,4 +1,4 @@
-export const enum Theme {
+export enum Theme {
   Default = "default",
   BusinessToolkit = "business-toolkit",
   Kancld = "kancld",
