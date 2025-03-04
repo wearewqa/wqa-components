@@ -7,7 +7,7 @@ import { Story, Meta } from "@storybook/react";
 import SocialMenu from "./index";
 import SocialMenuItem from "../SocialMenuItem";
 import { IconSize } from "../../enums/IconSize";
-import { Themes } from "../../enums/Theme";
+import { Theme } from "../../enums/Theme";
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -21,7 +21,7 @@ const Template: Story<ComponentProps<typeof SocialMenu>> = (args) => <SocialMenu
 export const Default = Template.bind({});
 Default.args = {
   // color: "primary",
-  theme: Themes.default,
+  theme: Theme.Default,
   children: (
     <>
       <SocialMenuItem href="#twitter" title="Twitter" name="social-twitter" size={IconSize.xsmall} />

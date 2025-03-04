@@ -6,7 +6,7 @@ import { Story, Meta } from "@storybook/react";
 
 import Checklist from "./index";
 import ChecklistItem from "../ChecklistItem";
-import { Themes } from "../../enums/Theme";
+import { Theme } from "../../enums/Theme";
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -19,7 +19,7 @@ const Template: Story<ComponentProps<typeof Checklist>> = (args) => <Checklist {
 
 export const Default = Template.bind({});
 Default.args = {
-  theme: Themes.default,
+  theme: Theme.Default,
   type: "primary",
   size: "medium",
   children: (
