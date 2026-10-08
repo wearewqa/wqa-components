@@ -2,7 +2,7 @@
 
 import React, { ComponentProps } from "react";
 
-import { Story, Meta } from "@storybook/react";
+import { StoryFn as Story, Meta } from "@storybook/react-webpack5";
 
 import RadioButton from "./index";
 
