@@ -13,29 +13,43 @@ import path from "path";
 const packageJson = JSON.parse(fs.readFileSync(path.resolve('package.json'), 'utf-8'));
 // const packageJson = require("./package.json");
 
+const plugins = (compilerOptions) => [
+  peerDepsExternal(),
+  resolve(),
+  commonjs(),
+  typescript({
+    tsconfig: "./tsconfig.json",
+    compilerOptions,
+    exclude: ["**/node_modules/**", "**/*.stories.tsx", "**/*.test.tsx"],
+  }),
+  postcss(),
+  terser(),
+];
+
 export default [
   {
     input: "src/index.ts",
-    output: [
-      {
-        file: packageJson.main,
-        format: "cjs",
-        sourcemap: true,
-      },
-      {
-        file: packageJson.module,
-        format: "esm",
-        sourcemap: true,
-      },
-    ],
-    plugins: [
-      peerDepsExternal(),
-      resolve(),
-      commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
-      postcss(),
-      terser(),
-    ],
+    output: {
+      file: packageJson.main,
+      format: "cjs",
+      sourcemap: true,
+    },
+    plugins: plugins({
+      declaration: false,
+      declarationMap: false,
+    }),
+  },
+  {
+    input: "src/index.ts",
+    output: {
+      file: packageJson.module,
+      format: "esm",
+      sourcemap: true,
+    },
+    plugins: plugins({
+      declaration: true,
+      declarationDir: "dist/esm/types",
+    }),
   },
   {
     input: "dist/esm/types/index.d.ts",

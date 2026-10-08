@@ -1,7 +1,7 @@
 // YourComponent.stories.ts | YourComponent.stories.tsx
 
 import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react-webpack5";
+import { Meta as ComponentMeta, StoryFn as ComponentStory } from "@storybook/react-webpack5";
 import Annotation from "./Annotation";
 
 //👇 This default export determines where your story goes in the story list

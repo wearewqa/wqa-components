@@ -1,7 +1,7 @@
 // YourComponent.stories.ts | YourComponent.stories.tsx
 
 import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta as ComponentMeta, StoryFn as ComponentStory } from "@storybook/react-webpack5";
 
 import  Icon  from "./";
 import { IconSize } from "../../enums/IconSize";
